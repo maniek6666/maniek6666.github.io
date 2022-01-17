@@ -1,4 +1,4 @@
-# PS4 9.00 Kernel Exploit
+# PS4 9.00 Kernel Exploit v2
 ---
 ## Summary
 In this project you will find an implementation that tries to make use of a filesystem bug for the Playstation 4 on firmware 9.00.
