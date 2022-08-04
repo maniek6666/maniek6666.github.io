@@ -137,9 +137,9 @@ var gadget_mod14_addr=0;
 var gadget_mod15_addr=0;
 var gadget_mod16_addr=0;
 var xtra_data;var stack_frame;var jump_2;var jump_1;var xtra_data_addr;var stack_frame_addr;var jump_2_addr;var jump_1_addr;
-var fail_msg_frag=hr+"<h1><b>Exploit Initialization FAILED!</h1><h2><span style='color:#000000;'><a href=\"javascript:window.location.reload();\">Refresh this page</a> & try again...</span></b></h2>";
-var progress_msg_frag1=hr+"<h1><b>Exploit Initialization..."+br+"<span style='color:#000000;'>Progress: ";
-var progress_msg_frag2='%, please wait...</span></b></h1>';
+var fail_msg_frag=hr+"<h1><b>Inicjalizacja exploita NIEUDANA!</h1><h2><span style='color:#000000;'><a href=\"javascript:window.location.reload();\">Refresh this page</a> & try again...</span></b></h2>";
+var progress_msg_frag1=hr+"<h1><b>Exploit Inicjalizacja..."+br+"<span style='color:#000000;'>Postęp: ";
+var progress_msg_frag2='%, proszę czekać...</span></b></h1>';
 
 
 //DEX 4.81
@@ -749,7 +749,7 @@ function clearResultEntry()
 }
 function writeEnvInfo()
 {
-	setInnerHTML(document.getElementById('footer'),hr+"<h3>PS3 System Browser Info:</h3>"+navigator.userAgent+br+navigator.appName+" (" + navigator.platform + ")"+br+new Date().toTimeString() + br);
+	setInnerHTML(document.getElementById('footer'),hr+"<h3>Informacje o przeglądarce systemu PS3:</h3>"+navigator.userAgent+br+navigator.appName+" (" + navigator.platform + ")"+br+new Date().toTimeString() + br);
 }
 
 String.prototype.setCharAt = function(index,chr)
@@ -2287,8 +2287,8 @@ function ps3chk(){
 	var ua = navigator.userAgent;
 	var uaStringCheck = ua.substring(ua.indexOf("5.0 (") + 5, ua.indexOf(") Apple") - 7);
 	var fwVersion = ua.substring(ua.indexOf("5.0 (") + 19, ua.indexOf(") Apple"));
-	var msgHFW = "ATTENTION!\n\nYour firmware version requires 4.84 - 4.88 HFW (Hybrid Firmware) to be installed, containing exploitable modules.";
-	var msgCongrats = "Congratulations! We've detected your PlayStation 3 is running FW " + fwVersion + ", which is compatible with ps3hen! Enjoy!";
+	var msgHFW = "UWAGA!\n\nTwoja wersja oprogramowania sprzętowego wymaga zainstalowania oprogramowania 4.84 - 4.89 HFW (Hybrid Firmware), zawierającego moduły możliwe do wykorzystania.";
+	var msgCongrats = "Gratulacje! Wykryliśmy, że na Twoim PlayStation 3 działa FW " + fwVersion + ",  które jest kontaktybilne z ps3hen! Możesz Się Cieszyć!";
 	switch (uaStringCheck) {
 		case "PLAYSTATION":
 			switch (fwVersion) {
@@ -2336,7 +2336,7 @@ function ps3chk(){
 			break;
 		
 		default:
-			alert('You are not on a PlayStation System! All features have been disabled');
+			alert('Nie korzystasz z systemu PlayStation! Wszystkie funkcje zostały wyłączone');
 			disable_all();
 			break;
 	}
