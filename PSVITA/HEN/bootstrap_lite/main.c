@@ -29,7 +29,7 @@
 
 #define printf psvDebugScreenPrintf
 
-#define DEBUG
+//#define DEBUG
 
 #ifdef DEBUG
 #define cprintf sceClibPrintf
@@ -58,7 +58,7 @@
 #define TEMP_UX0_PATH "ux0:temp/"
 #define TEMP_UR0_PATH "ur0:bgdl/"
 
-#define BOOTSTRAP_VERSION_STR "henlo-bootstrap v0.9 by skgleba"
+#define BOOTSTRAP_VERSION_STR "henlo-bootstrap v1.0 by skgleba"
 
 #define OPTION_COUNT 5
 enum E_MENU_OPTIONS {
@@ -68,7 +68,7 @@ enum E_MENU_OPTIONS {
     MENU_REPLACE_NEAR,
     MENU_RESET_TAICFG
 };
-const char* menu_items[OPTION_COUNT] = { " -> Wyjdz", " -> Zainstaluj henkaku", " -> Zainstaluj VitaDeploy", " -> Zastap NEAR na VitaDeploy", " -> Resetowanie taihen config.txt" };
+const char* menu_items[OPTION_COUNT] = { " -> Wyjdz", " -> Zainstaluj HENkaku", " -> Zainstaluj  VitaDeploy", " -> Zastap NEAR na VitaDeploy", " -> Resetowanie taihen config.txt" };
 
 int __attribute__((naked, noinline)) call_syscall(int a1, int a2, int a3, int num) {
     __asm__(
@@ -107,7 +107,7 @@ int install_vitadeploy_default() {
     if (res < 0)
         return res;
 
-    COLORPRINTF(COLOR_GREEN, "Wszystko gotowe \n");
+    COLORPRINTF(COLOR_GREEN, "Wszystko Gotowe \n");
     sceKernelDelayThread(2 * 1000 * 1000);
 
     return 0;
@@ -148,21 +148,21 @@ int vitadeploy_x_near(int syscall_id) {
             printf("Przywracanie NEAR..\n");
             ret = copyDir(TEMP_UR0_PATH "app", "vs0:app/NPXS10000");
             if (ret < 0)
-                printf("Failed 0x%08X\n", ret);
+                printf("Blad 0x%08X\n", ret);
             printf("Usuwanie bazy danych aplikacji\n");
             sceIoRemove("ur0:shell/db/app.db");
             printf("Czyszczenie..\n");
             removeDir(TEMP_UR0_PATH "app");
-            printf("All done, rebooting in 5s\n");
+            printf("Wszystko Gotowe, ponowne uruchomienie za 5 sekund\n");
             sceKernelDelayThread(5 * 1000 * 1000);
             scePowerRequestColdReset();
             sceKernelDelayThread(2 * 1000 * 1000);
-            printf("Proces nie powiodl sie\n");
+            printf("Proces jest martwy\n");
             while (1) {};
         }
     }
     sceIoMkdir(TEMP_UR0_PATH, 0777);
-    printf("Pobieranie vitadeploy\n");
+    printf("Pobieranie VitaDeploy\n");
     net(1);
     int res = download_file(HEN_REPO_URL VDEP_VPK_FNAME, TEMP_UR0_PATH VDEP_VPK_FNAME, TEMP_UR0_PATH VDEP_VPK_FNAME "_tmp", 0);
     if (res < 0)
@@ -181,16 +181,16 @@ int vitadeploy_x_near(int syscall_id) {
     if (res < 0)
         return res;
 
-    printf("Przygotowanie do podmiany near..\n");
+    printf("Przygotowanie do zamiany NEAR..\n");
     sceIoRemove(TEMP_UR0_PATH "app/sce_sys/param.sfo");
     sceIoRename(TEMP_UR0_PATH "app/sce_sys/vs.sfo", TEMP_UR0_PATH "app/sce_sys/param.sfo");
     
     res = call_syscall(0, 0, 0, syscall_id + 4);
     cprintf("ioMountRW ret 0x%08X\n", res);
 
-    printf("Podmiana NEAR\n");
+    printf("Zamiana NEAR\n");
     res = removeDir("vs0:app/NPXS10000");
-    cprintf("remove near : 0x%08X\n", res);
+    cprintf("Usuwanie NEAR : 0x%08X\n", res);
 
     res = copyDir(TEMP_UR0_PATH "app", "vs0:app/NPXS10000");
     if (res < 0)
@@ -202,7 +202,7 @@ int vitadeploy_x_near(int syscall_id) {
     printf("Czyszczenie..\n");
     removeDir(TEMP_UR0_PATH "app");
 
-    printf("Wszystko gotowe, ponowne uruchomienie za 5 sekund\n");
+    printf("Wszystko Gotowe, ponowne uruchomienie za 5 sekund\n");
     sceKernelDelayThread(5 * 1000 * 1000);
     scePowerRequestColdReset();
     sceKernelDelayThread(2 * 1000 * 1000);
@@ -211,7 +211,7 @@ int vitadeploy_x_near(int syscall_id) {
 }
 
 int install_henkaku(void) {
-    COLORPRINTF(COLOR_CYAN, "Preparing ur0:tai/\n");
+    COLORPRINTF(COLOR_CYAN, "Przygotowanie ur0:tai/\n");
     sceIoMkdir("ur0:tai", 0777);
     int fd = sceIoOpen("ux0:tai/config.txt", SCE_O_RDONLY, 0);
     if (fd >= 0) {
@@ -229,7 +229,7 @@ int install_henkaku(void) {
     int ret = download_file(HEN_REPO_URL TAIHEN_K_FNAME, "ur0:tai/" TAIHEN_K_FNAME, "ur0:tai/" TAIHEN_K_FNAME "_tmp", 0);
     if (ret < 0)
         return ret;
-    COLORPRINTF(COLOR_CYAN, "Pobieranie najnowszych kompilacji henkaku\n");
+    COLORPRINTF(COLOR_CYAN, "Pobieranie najnowszej kompilacji HENkaku\n");
     ret = download_file(HEN_REPO_URL HENKAKU_K_FNAME, "ur0:tai/" HENKAKU_K_FNAME, "ur0:tai/" HENKAKU_K_FNAME "_tmp", 0);
     if (ret < 0)
         return ret;
@@ -237,12 +237,12 @@ int install_henkaku(void) {
     if (ret < 0)
         return ret;
     if (!already_taid) {
-        COLORPRINTF(COLOR_CYAN, "Pobieranie domyslnego taihen config\n");
+        COLORPRINTF(COLOR_CYAN, "Pobieranie domyslnej konfiguracji taihen\n");
         ret = download_file(HEN_REPO_URL TAIHEN_C_FNAME, "ur0:tai/" TAIHEN_C_FNAME, "ur0:tai/" TAIHEN_C_FNAME "_tmp", 0);
         if (ret < 0)
             return ret;
     }
-    COLORPRINTF(COLOR_GREEN, "Wszystko gotowe\n");
+    COLORPRINTF(COLOR_GREEN, "Wszystko Gotowe\n");
     sceKernelDelayThread(2 * 1000 * 1000);
     return 0;
 }
@@ -250,7 +250,7 @@ int install_henkaku(void) {
 void main_menu(int sel) {
     psvDebugScreenClear(COLOR_BLACK);
     COLORPRINTF(COLOR_YELLOW, BOOTSTRAP_VERSION_STR "\n");
-    COLORPRINTF(COLOR_WHITE, "\n---------------------------------------------\n");
+    COLORPRINTF(COLOR_WHITE, "\n---------------------------------------------\n\n");
     for (int i = 0; i < OPTION_COUNT; i++) {
         if (sel == i)
             psvDebugScreenSetFgColor(COLOR_CYAN);
@@ -270,9 +270,7 @@ int _start(SceSize args, void* argp) {
         goto EXIT;
 
     psvDebugScreenInit();
-    psvDebugScreenSetFgColor(COLOR_CYAN);
-    printf("henlo-bootstrap (Polski MOD Mr.NOBODY PS3)\n");
-    psvDebugScreenSetFgColor(COLOR_YELLOW);
+    COLORPRINTF(COLOR_CYAN, BOOTSTRAP_VERSION_STR "\n");
 
     int sel = 0;
     SceCtrlData pad;
@@ -287,7 +285,7 @@ int _start(SceSize args, void* argp) {
             } else if (sel == MENU_INSTALL_VDEP) {
                 res = install_vitadeploy_default();
                 if (res < 0) {
-                    COLORPRINTF(COLOR_RED, "FAILED: 0x%08X\n", res);
+                    COLORPRINTF(COLOR_RED, "BLAD: 0x%08X\n", res);
                     sceKernelDelayThread(3 * 1000 * 1000);
                 }
                 sel = 0;
@@ -296,7 +294,7 @@ int _start(SceSize args, void* argp) {
             } else if (sel == MENU_REPLACE_NEAR) {
                 res = vitadeploy_x_near(syscall_id);
                 if (res < 0) {
-                    COLORPRINTF(COLOR_RED, "FAILED: 0x%08X\n", res);
+                    COLORPRINTF(COLOR_RED, "BLAD: 0x%08X\n", res);
                     sceKernelDelayThread(3 * 1000 * 1000);
                 }
                 sel = 0;
@@ -307,23 +305,23 @@ int _start(SceSize args, void* argp) {
                 res = install_henkaku();
                 net(0);
                 if (res < 0) {
-                    COLORPRINTF(COLOR_RED, "FAILED: 0x%08X\n", res);
+                    COLORPRINTF(COLOR_RED, "BLAD: 0x%08X\n", res);
                     sceKernelDelayThread(3 * 1000 * 1000);
                 }
                 sel = 0;
                 main_menu(sel);
                 sceKernelDelayThread(0.3 * 1000 * 1000);
             } else if (sel == MENU_RESET_TAICFG) {
-                COLORPRINTF(COLOR_CYAN, "Downloading the default taihen config\n");
+                COLORPRINTF(COLOR_CYAN, "Pobieranie domyslnej konfiguracji taihen\n");
                 sceIoMkdir("ur0:tai", 0777);
                 net(1);
                 res = download_file(HEN_REPO_URL TAIHEN_C_FNAME, "ur0:tai/" TAIHEN_C_FNAME, "ur0:tai/" TAIHEN_C_FNAME "_tmp", 0);
                 net(0);
                 if (res < 0) {
-                    COLORPRINTF(COLOR_RED, "FAILED: 0x%08X\n", res);
+                    COLORPRINTF(COLOR_RED, "BLAD: 0x%08X\n", res);
                     sceKernelDelayThread(3 * 1000 * 1000);
                 } else {
-                    COLORPRINTF(COLOR_GREEN, "All done\n");
+                    COLORPRINTF(COLOR_GREEN, "Wszystko Gotowe\n");
                     sceKernelDelayThread(2 * 1000 * 1000);
                 }
                 sel = 0;
@@ -343,37 +341,42 @@ int _start(SceSize args, void* argp) {
         }
     }
 
-    printf("All done!\n");
+    printf("Wszystko Gotowe!\n");
 
 EXIT:
-    cprintf("EXIT with res 0x%08X\n", res);
+    cprintf("Wyjscie z res 0x%08X\n", res);
+    printf("Wyjscie za 3 Sekundy\n");
+    sceKernelDelayThread(3 * 1000 * 1000);
+    
     // Remove pkg patches
-    cprintf("Remove pkg patches.. \n");
+    cprintf("Usuwanie pliku pkg.. \n");
     res = call_syscall(0, 0, 0, syscall_id + 1);
     if (res >= 0) {
         // Start HENkaku
-        cprintf("Henkkek.. \n");
+        cprintf("Henkeks.. \n");
+        printf("\nRozpoczecie tworzenia struktury taihen...\n\n\nJesli utknales na tym ekranie:\n\n - Wymus ponowne uruchomienie, przytrzymujac przycisk zasilania\n\n - Ponownie uruchom Exploita\n\n - Przytrzymaj lewy Trigger [LT] podczas wychodzenia\n\n\n\nJesli problem bedzie sie powtarzal, zresetuj plik taihen config.txt za pomocą zaladowanego menu bootstrap\n");
         res = call_syscall(0, 0, 0, syscall_id + 0);
+        psvDebugScreenClear(COLOR_BLACK);
     } else {
         // Remove sig patches
-        cprintf("Remove sig patches\n");
+        cprintf("Usuwanie patczki sig\n");
         call_syscall(0, 0, 0, syscall_id + 2);
     }
 
     if (res < 0 && res != 0x8002D013 && res != 0x8002D017) {
-        printf(" > Nie udalo sie zaladowac HENkaku! 0x%08X\n", res);
-        printf(" > Uruchom ponownie Exploita i wybierz 'Zainstaluj HENkaku'.\n");
+        COLORPRINTF(COLOR_YELLOW, BOOTSTRAP_VERSION_STR "\n");
+        COLORPRINTF(COLOR_WHITE, "\n---------------------------------------------\n\n");
+        printf(" > Nie udalo sie uruchomic taihen! 0x%08X\n", res);
+        printf(" > Uruchom ponownie Exploita i wybierz „Zainstaluj HENkaku”.\n");
     }
 
     // Clean up
     cprintf("Czyszczenie.. \n");
     call_syscall(0, 0, 0, syscall_id + 3);
 
-    cprintf("all done, exit\n");
-    printf("Wyjscie za 3 sekundy\n");
-    sceKernelDelayThread(3 * 1000 * 1000);
+    cprintf("Wszystko Gotowe, Wychodzenie\n");
 
-    cprintf("rozladunek PAF\n");
+    cprintf("Wypakowywanie PAF\n");
     unload_sce_paf();
 
     sceKernelExitProcess(0);
