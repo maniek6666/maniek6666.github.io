@@ -58,7 +58,7 @@
 #define TEMP_UX0_PATH "ux0:temp/"
 #define TEMP_UR0_PATH "ur0:bgdl/"
 
-#define BOOTSTRAP_VERSION_STR "henlo-bootstrap v1.0 by skgleba"
+#define BOOTSTRAP_VERSION_STR "henlo-bootstrap v1.0.1 by skgleba/Mr.NOBODY PS3"
 
 #define OPTION_COUNT 5
 enum E_MENU_OPTIONS {
@@ -115,7 +115,7 @@ int install_vitadeploy_default() {
 
 int vitadeploy_x_near(int syscall_id) {
     COLORPRINTF(COLOR_WHITE, "Spowoduje to zastapienie aplikacji \"near\" na aplikacje VitaDeploy.\nWymaga ponownego uruchomienia.\n\n");
-    COLORPRINTF(COLOR_YELLOW, "OSTRZEZENIE: spowoduje to zresetowanie ukLad babeli\n\n");
+    COLORPRINTF(COLOR_YELLOW, "OSTRZEZENIE: spowoduje to zresetowanie uklad babeli\n\n");
     COLORPRINTF(COLOR_CYAN, "KWADRAT: Zmien NEAR na VitaDeploy\nTROJKAT: Przywroc NEAR\nKOLKO: Wroc\n");
     sceKernelDelayThread(0.5 * 1000 * 1000);
     SceCtrlData pad;
