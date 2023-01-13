@@ -1,0 +1,24 @@
+pkgname=asio
+pkgver=1.19.2
+pkgrel=2
+_commit='cfbe961e2d6e2978d5e081231e4f798df46437c5'
+url="https://think-async.com/Asio/"
+source=("git+https://github.com/diasurgical/${pkgname}.git#commit=${_commit}")
+sha256sums=('SKIP')
+
+prepare() {
+    cd $pkgname/$pkgname
+    sed '/^SUBDIRS/ s/ src//' -i Makefile.am
+    ./autogen.sh
+}
+
+build() {
+  cd $pkgname/$pkgname
+  ./configure --host=arm-vita-eabi --prefix=$prefix
+  make
+}
+
+package () {
+  cd $pkgname/$pkgname
+  make DESTDIR=$pkgdir install
+}

@@ -1,0 +1,17 @@
+pkgname=fftw
+pkgver=3.3.10
+pkgrel=1
+url="https://www.fftw.org/"
+source=("https://fftw.org/fftw-${pkgver}.tar.gz")
+sha256sums=('56c932549852cddcfafdab3820b0200c7742675be92179e59e6215b340e26467')
+
+build() {
+  cd fftw-$pkgver
+  ./configure --host=arm-vita-eabi --prefix=$prefix --disable-shared --enable-static --disable-fortran --without-g77-wrappers
+  make -j$(nproc)
+}
+
+package () {
+  cd fftw-$pkgver
+  make DESTDIR=$pkgdir install
+}

@@ -1,0 +1,17 @@
+pkgname=jansson
+pkgver=2.14
+pkgrel=1
+url="https://digip.org/jansson/"
+source=("https://github.com/akheron/$pkgname/releases/download/v$pkgver/$pkgname-$pkgver.tar.gz")
+sha256sums=('5798d010e41cf8d76b66236cfb2f2543c8d082181d16bc3085ab49538d4b9929')
+
+build() {
+  cd $pkgname-$pkgver
+  ./configure --host=arm-vita-eabi --prefix=$prefix --disable-shared --enable-static --without-simd
+  make -j$(nproc)
+}
+
+package () {
+  cd $pkgname-$pkgver
+  make DESTDIR=$pkgdir install
+}

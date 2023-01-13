@@ -1,0 +1,23 @@
+pkgname=flac
+pkgver=1.3.4
+pkgrel=1
+url="https://xiph.org/flac/"
+source=("https://downloads.xiph.org/releases/flac/flac-${pkgver}.tar.xz")
+sha256sums=('8ff0607e75a322dd7cd6ec48f4f225471404ae2730d0ea945127b1355155e737')
+depends=('libogg')
+
+build() {
+  cd $pkgname-$pkgver
+  export CFLAGS="-Wl,-q -O3 -mfpu=neon -mvectorize-with-neon-quad"
+  export CXXFLAGS=$CFLAGS
+  ./configure --host=arm-vita-eabi --prefix=$prefix --disable-shared --enable-static --without-pic
+  make -j$(nproc) -C src/libFLAC
+  make -j$(nproc) -C src/libFLAC++
+}
+
+package () {
+  cd $pkgname-$pkgver
+  make -C src/libFLAC DESTDIR=$pkgdir install
+  make -C src/libFLAC++ DESTDIR=$pkgdir install
+  make -C include DESTDIR=$pkgdir install
+}
