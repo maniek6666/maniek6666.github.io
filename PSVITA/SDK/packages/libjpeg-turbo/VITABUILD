@@ -1,0 +1,23 @@
+pkgname=libjpeg-turbo
+pkgver=2.1.4
+pkgrel=1
+url="https://www.libjpeg-turbo.org/"
+source=("git+https://github.com/libjpeg-turbo/libjpeg-turbo#tag=${pkgver}" "libjpeg-turbo.patch")
+sha256sums=('SKIP' 'SKIP')
+
+prepare() {
+  cd $pkgname
+  patch -Np1 -i "${srcdir}/libjpeg-turbo.patch"
+}
+
+build() {
+  cd $pkgname
+  mkdir build && cd build
+  cmake .. -DCMAKE_TOOLCHAIN_FILE=$VITASDK/share/vita.toolchain.cmake -DCMAKE_INSTALL_PREFIX=$prefix -DENABLE_SHARED=FALSE -DWITH_SIMD=FALSE
+  make -j$(nproc)
+}
+
+package () {
+  cd $pkgname/build
+  make DESTDIR=$pkgdir install
+}

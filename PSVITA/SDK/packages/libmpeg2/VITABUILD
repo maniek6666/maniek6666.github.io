@@ -1,0 +1,17 @@
+pkgname=libmpeg2
+pkgver=0.5.1
+pkgrel=1
+url="https://libmpeg2.sourceforge.io/"
+source=("git+https://github.com/cisco-open-source/libmpeg2#tag=upstream/${pkgver}")
+sha256sums=('SKIP')
+
+build() {
+  cd $pkgname
+  ./configure --host=arm-vita-eabi --prefix=$prefix --disable-shared --enable-static --disable-sdl
+  make
+}
+
+package() {
+  cd $pkgname
+  make DESTDIR=$pkgdir install
+}

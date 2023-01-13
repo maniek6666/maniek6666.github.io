@@ -1,0 +1,18 @@
+pkgname=libsigc++-3.0
+pkgver=3.2.0
+pkgrel=1
+url="https://libsigcplusplus.github.io/libsigcplusplus/"
+source=("https://github.com/libsigcplusplus/libsigcplusplus/releases/download/${pkgver}/libsigc++-${pkgver}.tar.xz")
+sha256sums=('8cdcb986e3f0a7c5b4474aa3c833d676e62469509f4899110ddf118f04082651')
+
+build() {
+  cd libsigc++-$pkgver
+  cmake . -DCMAKE_TOOLCHAIN_FILE=$VITASDK/share/vita.toolchain.cmake -DCMAKE_INSTALL_PREFIX=$prefix \
+        -DCMAKE_BUILD_TYPE=Release
+  make -j$(nproc)
+}
+
+package () {
+  cd libsigc++-$pkgver
+  make DESTDIR=$pkgdir install
+}

@@ -1,0 +1,24 @@
+pkgname=libxml2
+pkgver=v2.9.8
+pkgrel=1
+url="http://xmlsoft.org/"
+source=("git+https://github.com/GNOME/libxml2.git#tag=${pkgver}")
+sha256sums=('SKIP')
+depends=('zlib')
+
+prepare() {
+  cd ${pkgname}
+  patch -p1 < "${startdir}/patches/libxml2-2.9.8-vita.patch"
+}
+
+build() {
+  cd ${pkgname}
+  ./autogen.sh --host arm-vita-eabi --prefix=$prefix --disable-ipv6 --without-debug --without-ftp --without-http --without-threads --without-lzma --disable-tests --without-python
+  make -j$(nproc)
+}
+
+package () {
+  cd ${pkgname}
+  make DESTDIR=${pkgdir} install
+}
+

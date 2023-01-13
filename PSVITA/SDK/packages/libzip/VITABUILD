@@ -1,0 +1,25 @@
+pkgname=libzip
+pkgver=1.9.2
+pkgrel=1
+url="https://libzip.org/"
+source=("https://libzip.org/download/$pkgname-$pkgver.tar.xz" "libzip.patch")
+sha256sums=('c93e9852b7b2dc931197831438fee5295976ee0ba24f8524a8907be5c2ba5937'
+            'SKIP')
+depends=('zlib')
+
+prepare() {
+  cd $pkgname-$pkgver
+  patch -Np1 -i "${srcdir}/libzip.patch"
+}
+
+build() {
+  cd $pkgname-$pkgver
+  mkdir build && cd build
+  cmake .. -DCMAKE_TOOLCHAIN_FILE=$VITASDK/share/vita.toolchain.cmake -DCMAKE_INSTALL_PREFIX=$prefix -DBUILD_TOOLS=OFF -DBUILD_REGRESS=OFF -DBUILD_EXAMPLES=OFF -DBUILD_DOC=OFF
+  make -j$(nproc)
+}
+
+package () {
+  cd $pkgname-$pkgver/build
+  make DESTDIR=$pkgdir install
+}

@@ -1,0 +1,24 @@
+pkgname=libimagequant
+pkgver=2.17.0
+pkgrel=1
+url="https://github.com/ImageOptim/libimagequant"
+source=("git+https://github.com/ImageOptim/libimagequant.git#tag=2.17.0")
+sha256sums=('SKIP')
+
+prepare() {
+  cd $pkgname
+  sed '/^all:/ s/shared//' -i ./Makefile
+  sed 's/install -m 755 \$(SHAREDLIBVER)/#/' -i ./Makefile
+  sed 's/ln -sf/#/' -i ./Makefile
+}
+
+build() {
+  cd $pkgname
+  CC=arm-vita-eabi-gcc ./configure --prefix=$VITASDK/arm-vita-eabi/ --disable-sse
+  make -j$(nproc) static
+}
+
+package () {
+  cd $pkgname
+  make DESTDIR="$pkgdir" install
+}
