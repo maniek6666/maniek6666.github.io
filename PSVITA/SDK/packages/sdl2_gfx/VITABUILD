@@ -1,0 +1,18 @@
+pkgname=sdl2_gfx
+pkgver=1.0.4
+pkgrel=2
+url="https://www.ferzkopp.net/joomla/content/view/19/14/"
+source=("https://www.ferzkopp.net/Software/SDL2_gfx/SDL2_gfx-${pkgver}.tar.gz")
+sha256sums=('63e0e01addedc9df2f85b93a248f06e8a04affa014a835c2ea34bfe34e576262')
+depends=('sdl2')
+
+build() {
+  cd SDL2_gfx-${pkgver}
+  ./configure --host=arm-vita-eabi --prefix=$prefix --disable-shared --enable-static --without-pic --enable-mmx=no
+  make -j$(nproc)
+}
+
+package () {
+  cd SDL2_gfx-${pkgver}
+  make DESTDIR=$pkgdir install
+}

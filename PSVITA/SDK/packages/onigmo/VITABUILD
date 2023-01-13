@@ -1,0 +1,17 @@
+pkgname=onigmo
+pkgver=6.2.0
+pkgrel=1
+url="https://github.com/k-takata/Onigmo"
+source=("https://github.com/k-takata/Onigmo/releases/download/Onigmo-${pkgver}/onigmo-${pkgver}.tar.gz")
+sha256sums=('c648496b5339953b925ebf44b8de356feda8d3428fa07dc1db95bfe2570feb76')
+
+build() {
+  cd $pkgname-$pkgver
+  ./configure --host=arm-vita-eabi --prefix=$prefix --disable-shared --enable-static
+  make -j$(nproc)
+}
+
+package () {
+  cd $pkgname-$pkgver
+  make DESTDIR=$pkgdir install
+}

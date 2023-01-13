@@ -1,0 +1,17 @@
+pkgname=speexdsp
+pkgver=1.2.1
+pkgrel=1
+url="https://speex.org/"
+source=("http://downloads.xiph.org/releases/speex/speexdsp-${pkgver}.tar.gz")
+sha256sums=('8c777343e4a6399569c72abc38a95b24db56882c83dbdb6c6424a5f4aeb54d3d')
+
+build() {
+  cd $pkgname-$pkgver
+  ./configure --host=arm-vita-eabi --prefix=$prefix --disable-shared --enable-static
+  make -j$(nproc)
+}
+
+package () {
+  cd $pkgname-$pkgver
+  make DESTDIR=$pkgdir install
+}

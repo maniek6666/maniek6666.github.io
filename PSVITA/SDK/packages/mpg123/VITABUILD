@@ -1,0 +1,23 @@
+pkgname=mpg123
+pkgver=1.25.10
+pkgrel=1
+url="https://www.mpg123.de"
+source=("https://www.mpg123.de/download/mpg123-${pkgver}.tar.bz2" "mpg123.patch")
+sha256sums=('6c1337aee2e4bf993299851c70b7db11faec785303cfca3a5c3eb5f329ba7023' '0109e6c44310da791eefd9a032c07f775315c3ce8267a0e9046b416edf2d61ad')
+
+prepare() {
+  patch -Np0 -i "${srcdir}/mpg123.patch"
+  cd $pkgname-$pkgver
+  autoreconf -fi
+}
+
+build() {
+  cd $pkgname-$pkgver
+  CFLAGS="-DPSP2" ./configure --host=arm-vita-eabi --prefix=$prefix --disable-shared --enable-static --enable-fifo=no --enable-ipv6=no --enable-network=no --enable-int-quality=no --with-cpu=neon --with-default-audio=dummy
+  make -j$(nproc)
+}
+
+package () {
+  cd $pkgname-$pkgver
+  make DESTDIR=$pkgdir install
+}

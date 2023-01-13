@@ -1,0 +1,21 @@
+pkgname=vitaShaRK
+pkgver=1.4
+pkgrel=1
+url="https://github.com/Rinnegatamante/$pkgname"
+source=("https://github.com/Rinnegatamante/$pkgname/archive/refs/tags/v.$pkgver.tar.gz")
+sha256sums=('daf872610b521d5496495b2036223f98f1aeb5b5b038c72b0fee4c4b2f5c2646')
+depends=('taihen SceShaccCgExt')
+
+build() {
+  cd $pkgname-v.$pkgver
+  make -j$(nproc)
+}
+
+package () {
+  mkdir -p $pkgdir/$VITASDK/arm-vita-eabi/lib
+  mkdir -p $pkgdir/$VITASDK/arm-vita-eabi/include
+  
+  cd $pkgname-v.$pkgver
+  cp libvitashark.a $pkgdir/$VITASDK/arm-vita-eabi/lib/
+  cp source/vitashark.h $pkgdir/$VITASDK/arm-vita-eabi/include/
+}
