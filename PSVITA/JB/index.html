@@ -1,7 +1,7 @@
 <!-- henlo frontend by Freakler -->
 <html>
 	<head>
-		<title>Polska Wersja HENlo - Homebrew Enabler</title>
+		<title>HENlo - Homebrew Enabler</title>
 		
 		<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' />
 
@@ -19,7 +19,7 @@
 				color:white;
 				#background-image:linear-gradient(90deg, #0a6d00 0%, #33a128 45%, #0a6d00 100%); /* green */
 				#background-image:linear-gradient(90deg, #002ea2 0%, #0042e7 45%, #002ea2 100%);/* blue */
-				background-image:linear-gradient(90deg, #002ea2 0%, #0042e7 45%, #002ea2 100%); /* orange */
+				background-image:linear-gradient(90deg, #9e8003 0%, #cfa807 45%, #9e8003 100%); /* orange */
 			}
 			
 			.headertext {
@@ -199,9 +199,9 @@
 	
 	<body>
 
-		<span id="debug" style="position:absolute; color:white; font-size:15px;">&#9733;</span>
+		<span id="debug" style="position:absolute; color:black; font-size:14px;">&#9733;</span>
 		<script>
-		document.getElementById("debug").innerHTML = "Wykryto Wersję: " + firmware;
+		document.getElementById("debug").innerHTML = "Detected ver: " + firmware;
 		</script>
 			
 		<center>
@@ -212,22 +212,24 @@
 			<!-- WELCOME ------------------------------------------------------------------------------------------------------------------------>	
 			<div id="page_welcome" style="display:none;">
 				<!-- Headline & Logo ------------------------------------------------------->
-				<p class="headertext">Jailbreak HENlo - Playstation Vita</p>
+				<p class="headertext">HENlo - a Playstation Vita Jailbreak</p>
 				<hr class="line_top"><hr class="line_bot">
 				<p style="margin-top:8px; font-size:25px;"><!--for PlayStation Vita & PlayStation TV--></p> <!-- &#9733;  -->
 				
 				<!-- Content -------------------------------------------------------------------->
 				<div class="contentcontainer">
-					<p>Witaj w HENlo<br>Odblokuj swoją Vitę	a będziesz mógł uruchomić nieoficjalne Gry i Programy.</p>
-					<p>Wsparcie dla PSVita Fat,Slim oraz PSTV z Oprogramowaniem: <b>3.65 - 3.74</b></p>
+					<br>
+					<p>Welcome to HENlo<br>Unlock your Vita and run unofficial games and applications.</p>
+					<p>Supported Firmwares: 3.65 - 3.74</p>
 				</div>
 				
 				<!-- Buttons -------------------------------------------------------------------->
 				<div class="buttonarea">
-					<button class="button" onclick="pagescroll('page_welcome','page_hen')">Odblokuj Vita</button>
+					<button class="button" onclick="pagescroll('page_welcome','page_hen')">Unlock my Vita</button>
 					<br><br><br>
-					<button style="float:left;" class="button" onclick="pagescroll('page_welcome','page_readme')">Czytaj</button>
-					<button style="float:right;" class="button" onclick="pagescroll('page_welcome','page_changes')">Zmiany</button>
+					<button style="float:left;" class="button" onclick="pagescroll('page_welcome','page_readme')">Readme</button>
+					<button style="float:center;" class="button" onclick="pagescroll('page_welcome','page_info')">Informacje</button>
+					<button style="float:right;" class="button" onclick="pagescroll('page_welcome','page_changes')">Changelog</button>
 				</div>
 			</div>
 			<script>
@@ -239,14 +241,14 @@
 			<!-- UNSUPPORTED ------------------------------------------------------------------------------------------------------------------------>		
 			<div id="page_unsupported" style="display:none;">
 				<!-- Headline & Logo ------------------------------------------------------->
-				<p class="headertext">Jailbreak HENlo - Playstation Vita</p>
+				<p class="headertext">HENlo - a Playstation Vita Jailbreak</p>
 				<hr class="line_top"><hr class="line_bot">
 				<p style="margin-top:8px; font-size:25px;"><!--for Firmwares 3.65 - 3.74--></p> <!-- &#9733;  -->
 				
 				<!-- Content -------------------------------------------------------------------->
 				<div class="contentcontainer">
 					<br>
-					<p>To Oprogramowanie nie jest wspierane!</p>
+					<p>This Firmware is not supported!</p>
 				</div>
 			</div>
 			<script>
@@ -257,20 +259,20 @@
 			<!-- UPDATE ------------------------------------------------------------------------------------------------------------------------>		
 			<div id="page_update" style="display:none;">
 				<!-- Headline & Logo ------------------------------------------------------->
-				<p class="headertext">Jailbreak HENlo - Playstation Vita</p>
+				<p class="headertext">HENlo - a Playstation Vita Jailbreak</p>
 				<hr class="line_top"><hr class="line_bot">
 				<p style="margin-top:8px; font-size:25px;"><!--for Firmwares 3.65 - 3.74--></p> <!-- &#9733;  -->
 				
 				<!-- Content -------------------------------------------------------------------->
 				<div class="contentcontainer">
 					<br>
-					<p>To Oprogramowanie nie jest wspierane!</p>
-					<p>Musisz menualnie zainstalować <b>3.65</b> lub wyższe!</p>
+					<p>This Firmware is not supported!</p>
+					<p>You need to manually update to 3.65 or higher!</p>
 				</div>
 				
 				<!-- Buttons -------------------------------------------------------------------->
 				<div class="buttonarea">
-					<button class="button" onclick="pagescroll('page_update','page_updateinstructions')">Zaktualizuj instrukcje</button>
+					<button class="button" onclick="pagescroll('page_update','page_updateinstructions')">Update Instructions</button>
 					<br><br><br>
 				</div>
 			</div>
@@ -286,19 +288,19 @@
 			<!-- UPDATE INSTRUCTIONS ------------------------------------------------------------------------------------------------------------------------>	
 			<div id="page_updateinstructions" style="display:none;">
 				<!-- Headline & Logo ------------------------------------------------------->
-				<p class="headertext">Jailbreak HENlo - Playstation Vita</p>
+				<p class="headertext">HENlo - a Playstation Vita Jailbreak</p>
 				<hr class="line_top"><hr class="line_bot">
-				<p style="margin-top:8px; font-size:25px;">Instrukcja Aktualizacji Manualnej</p>
+				<p style="margin-top:8px; font-size:25px;">Manual Update Instructions</p>
 				
 				<!-- Content -------------------------------------------------------------------->
 				<div class="contentcontainer">
 					<div class="scrollbox">
 					  <ol>
-					  <li>Otwórz aplikację Ustawienia</li><br>
-					  <li>Wybierz „Aktualizacja systemu”, a następnie „Aktualizuj przez Wi-Fi."</li><br>
-					  <li>Powinieneś zobaczyć wyskakujące okienko z informacją, że jest nowa aktualizacja. <strong>Upewnij się, że nowa wersja aktualizacji to „3.74"!</strong> Jeśli wersja jest inna, <strong>nie kontynuuj</strong>.</li><br>
-					  <li>Po upewnieniu się, że aktualizujesz do wersji 3.74, postępuj zgodnie z instrukcjami wyświetlanymi na ekranie, aby zaktualizować.</li><br>
-					  <li>Po aktualizacji do wersji 3.74 możesz ponownie odwiedzić tę witrynę, aby odblokować swoją konsolę.</li><br>
+					  <li>Open the Settings app</li><br>
+					  <li>Select "System Update" and then "Update Using Wi-Fi."</li><br>
+					  <li>You should see a pop-up saying there is a new update. <strong>Make sure the new update version is "3.74"!</strong> If the version is different, <strong>do not proceed</strong>.</li><br>
+					  <li>After ensuring you are updating to 3.74, proceed with the steps on screen to update.</li><br>
+					  <li>After updating to 3.74, you can revisit this website to jailbreak your console.</li><br>
 					  </ol>
 					</div>
 				</div>
@@ -308,27 +310,24 @@
 			<!-- README ------------------------------------------------------------------------------------------------------------------------>	
 			<div id="page_readme" style="display:none;">
 				<!-- Headline & Logo ------------------------------------------------------->
-				<p class="headertext">Jailbreak HENlo - Playstation Vita</p>
+				<p class="headertext">HENlo - a Playstation Vita Jailbreak</p>
 				<hr class="line_top"><hr class="line_bot">
 				
 				<!-- Content -------------------------------------------------------------------->
 				<div class="contentcontainer">
 
 					<div class="scrollbox">
-						<b>Czym jest HENlo?</b>
-						<p>HENlo to piąty publiczny jailbreak dla PlayStation Vita i PlayStation TV. Jest to podobne do jailbreaka z iPhone'a lub rootowania urządzenia z Androidem. Pozwala na dokonywanie modyfikacji jądra i użytkownika, zmianę szybkości zegara, instalowanie wtyczek, uruchamianie homebrews i wiele innych.</p>
+						<b>What is HENlo?</b>
+						<p>HENlo is the fifth public jailbreak for PlayStation Vita and PlayStation TV. It is akin to jailbreaking your iPhone or rooting your Android device. It allows you to make kernel- and user-modifications, change the clock speed, install plugins, run homebrews and much
+						more.</p>
 						<br>
-						<b>Co zrobi Exploit z moim urządzeniem?</b>
-						<p>Po kliknięciu „odblokuj",Exploit HENlo załaduje na twojej konsoli bootstrap henlo_jb ,którego możesz użyć do uruchomienia  struktury taihenkaku a także zainstalować narzędzia VitaDeploy oraz Vitashell.</p>
+						<b>What will it do to my device?</b>
+						<p>When you click "unlock", HENlo will exploit this console and load the henlo_jb bootstrap which you can then use to launch the taihenkaku framework as well as install the VitaDeploy toolbox.</p>
 						<br>
-						<b>Deweloperzy</b>
-						<p>Exploit HENlo autorstwa TheFlow.</p>
-						<p>Implementacja Jailbreak dzięki SKGleba.</p>
-						<p>Nakładka Jailbreaka od Freakler.</p>
-						<br>
-						<b>Modyfikacje</b>
-						<p>Tłumaczenie oraz Modyfikacje od Mr.NOBODY PS3.</p>
-						<br>
+						<b>Credits</b>
+						<p>HENlo exploit chain by TheFlow.</p>
+						<p>Jailbreak implementation by SKGleba.</p>
+						<p>This frontend by Freakler.</p>
 						<br>
 
 					</div>
@@ -336,71 +335,110 @@
 				
 				<!-- Buttons -------------------------------------------------------------------->
 				<div class="buttonarea">
-				<button class="button" onclick="pagescroll('page_readme','page_welcome')">Wróć</button>
+				<button class="button" onclick="pagescroll('page_readme','page_welcome')">Go back</button>
+				</div>
+			</div>
+			
+			<!-- informacje przerobienia ------------------------------------------------------------------------------------------------------------------------>	
+			<div id="page_info" style="display:none;">
+				<!-- Headline & Logo ------------------------------------------------------->
+				<p class="headertext">HENlo - dupa blada jb</p>
+				<hr class="line_top"><hr class="line_bot">
+				
+				<!-- Content -------------------------------------------------------------------->
+				<div class="contentcontainer">
+
+					<div class="scrollbox">
+						<b>Jak przerobic psvita za pomoca HENlo?</b>
+						<p>HNa huj to czytasz</p>
+						<br>
+						<b>What will it do to my device?</b>
+						<p>When you click "unlock", HENlo will exploit this console and load the henlo_jb bootstrap which you can then use to launch the taihenkaku framework as well as install the VitaDeploy toolbox.</p>
+						<br>
+						<b>Credits</b>
+						<p>HENlo exploit chain by TheFlow.</p>
+						<p>Jailbreak implementation by SKGleba.</p>
+						<p>This frontend by Freakler.</p>
+						<br>
+
+					</div>
+				</div>
+				
+				<!-- Buttons -------------------------------------------------------------------->
+				<div class="buttonarea">
+				<button class="button" onclick="pagescroll('page_readme','page_welcome')">wroć</button>
 				</div>
 			</div>
 			
 			<!-- CHANGELOG -->	
 			<div id="page_changes" style="display:none;">
 				<!-- Headline & Logo -->
-				<p class="headertext">Jailbreak HENlo - Playstation Vita</p>
+				<p class="headertext">HENlo - a Playstation Vita Jailbreak</p>
 				<hr class="line_top"><hr class="line_bot">
 				<!-- Content -->
 				<div class="contentcontainer"> <!-- -->
 					<div class="scrollbox">
-						<h1>Nowe funkcje w wersji 1.03</h1>
+						<h1>New Features in Version v1.0.4</h1>
 						<pre>
- - HENlo dodano fałszowanie wersji henkaku<p>
- - Dodano tę stronę docelową ( hello world! )<p>
- - Dodano opcję montowania sd2vita jako ux0<p>
- - Przeniesiono zawartość do pobrania na inny serwer<p>
- - Zmieniono adres URL HENlo na jailbreak.psp2.dev<p>
+ — Naprawiono obsługę aktywowanych zestawów devkits/testkits
+ — Dodano obsługę oprogramowania systemowego w wersji 3.67
+ — Ulepszone informacje dotyczące nawigacji w menu ładowania bootstrap
+ — Przeniesiono lokalizację ładowania początkowego ur0 do osobnego katalogu w celu zabezpieczenia na przyszłość (tmp)
+ - Wyczyściłem niektóre resztki kodu
 						</pre>
-						<h1>Nowe funkcje w wersji 1.02</h1>
+						<h1>New Features in Version 1.03</h1>
 						<pre>
- - Naprawiono ponowne montowanie vs0 podczas<p> podmiany/przywracania NEAR<p>
+ - HENlo now bypasses henkaku version spoof
+ - Added this landing page ( hello world! )
+ - Added an option to mount sd2vita to ux0
+ - Moved downloadable content to a different server
+ - Changed HENlo url to jailbreak.psp2.dev
 						</pre>
-						<h1>Nowe funkcje w wersji 1.01</h1>
+						<h1>New Features in Version 1.02</h1>
 						<pre>
- - Próba naprawy problemu z NEAR<p>
- - Więcej szczegółowych błędów<p>
- - Przycisk PS jest teraz zablokowany w menu bootstrap<p>
+ - Fixed vs0 remount during NEAR replace/restore
 						</pre>
-						<h1>Nowe funkcje w wersji 1.00</h1>
+						<h1>New Features in Version 1.01</h1>
 						<pre>
- - Rozpoczęcie taihen pokazuje teraz instrukcje dotyczącą<p> w sytuacji zawieszenia konsoli<p>
- - Usunięto większość dzienników debugowania<p>
- - Drobne poprawki interfejsu użytkownika<p>
+ - Attempt to fix NEAR replace issues
+ - More verbose errors
+ - PS Button is now locked while in the bootstrap menu
+						</pre>
+						<h1>New Features in Version 1.00</h1>
+						<pre>
+ - Starting taihen now shows a freeze situation instructions
+ - Removed most debug logging
+ - Minor UI tweaks
 						</pre>
 					</div>
 				</div>
 				
 				<!-- Buttons -->
 				<div class="buttonarea">
-				<button class="button" onclick="pagescroll('page_changes','page_welcome')">Wróć</button>
+				<button class="button" onclick="pagescroll('page_changes','page_welcome')">Go back</button>
 				</div>
 			</div>
 								
 			<!-- CONFIRM -->	
 			<div id="page_hen" style="display:none;">
 				<!-- Headline & Logo -->
-				<p class="headertext">Jailbreak HENlo - Playstation Vita</p>
+				<p class="headertext">HENlo - a Playstation Vita Jailbreak</p>
 				<hr class="line_top"><hr class="line_bot">
 				<p style="margin-top:8px; font-size:25px;"></p> <!-- &#9733;  -->
 				
 				<!-- Content -->
 				<div class="contentcontainer">
 					<br>
-					<p>Jeśli uruchomisz HENlo jailbreak.</p>
-					<p>Po zakończeniu procesu ładowania przeglądarka internetowa zostanie automatycznie zamknięta i uruchomi się <b>bootstrap henlo_jb</b>.</p>
-					<p>Aby rozpocząć naciśnij przycisk <b>Odblokuj</b>..</p>
+					<p>You are about to launch the HENlo jailbreak.</p>
+					<p>After the process is complete, the Web Browser will close automatically and launch the <b>henlo_jb bootstrap</b>.</p>
 					<br>
+					<p>Press "Unlock" to begin..</p>
 				</div>
 				
 				<!-- Buttons -->
 				<div class="buttonarea">
-					<button style="float:left;" class="button" onclick="pagescroll('page_hen','page_welcome')">Anuluj</button>
-					<button style="float:right;" class="button" onclick="location.href = 'go'">Odblokuj</button>
+					<button style="float:left;" class="button" onclick="pagescroll('page_hen','page_welcome')">Cancel</button>
+					<button style="float:right;" class="button" onclick="location.href = 'go'">Unlock</button>
 				</div>
 			</div>
 			
