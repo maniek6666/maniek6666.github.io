@@ -891,7 +891,7 @@ function dumpFlash()
 }
 function enablePatcher()
 {
-    showResult('<h3><span style="color:green">Operacja zrzutu pamieci flash zakonczona sukcesem!</span><br><span style="color:red">Prosze upewnic sie, ze zrzut pamieci flash zostal zapisany na dysku USB i zweryfikuj jego poprawnosc (PyPS3tools) przed przystąpieniem do patchowania pamięci..</span></h3>');
+    showResult('<h3><span style="color:green">Operacja zrzutu pamieci flash zakonczona sukcesem!</span><br><span style="color:red">Prosze upewnic sie, ze zrzut pamieci flash zostal zapisany na dysku USB i zweryfikuj jego poprawnosc (PyPS3tools) przed przystapieniem do patchowania pamieci..</span></h3>');
     document.getElementById("init").value = "Patch "+ftype+" pamieci flash";
     document.getElementById("init").onclick = function (){writePatch();};
     document.getElementById("init").disabled = false;
@@ -902,9 +902,9 @@ function writePatch()
     var sfc=checkMemory(stack_frame2_addr-0x4,0x20000,stack_frame2.length);
     if (sfc===stack_frame2)
     {
-       showResult('<h3>Patch-owanie '+ftype+' pamięci flash...<br>Moze to zajac kilka minut. <span style="color:red">Nie mozna wylaczac zasilania konsoli podczas Patch-owania.</span></h3>');
+       showResult('<h3>Patch-owanie '+ftype+' pamieci flash...<br>Moze to zajac kilka minut. <span style="color:red">Nie mozna wylaczac zasilania konsoli podczas Patch-owania.</span></h3>');
        setTimeout(trigger,50,jump_1_addr_2);
-       setTimeout(showResult,1000,"<h3><span style='color:green'>Operacja Patch-owania zakończona sukcesem!</span><br>Teraz uruchom ponownie PS3 i zainstaluj wybrane przez siebie i zweryfikowane oprogramowanie CFW..</h3>");
+       setTimeout(showResult,1000,"<h3><span style='color:green'>Operacja Patch-owania zakonczona sukcesem!</span><br>Teraz uruchom ponownie PS3 i zainstaluj wybrane przez siebie i zweryfikowane oprogramowanie CFW..</h3>");
     }
     else
     {
