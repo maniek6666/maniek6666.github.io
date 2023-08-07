@@ -2,7 +2,7 @@
 
 # henlo
 webkit-based jailbreak for Playstation Vita/TV on firmware 3.65+
-[https://github.com/SKGleba/henlo_jb](https://github.com/SKGleba/henlo_jb)
+[Oryginal SKGleba](https://github.com/SKGleba/henlo_jb)
 ![WIN_20221228_17_38_59_Pro](https://user-images.githubusercontent.com/30833773/209846346-8cc988e5-81b7-40be-9bb9-4f124794c498.jpg)
 
 ## usage
