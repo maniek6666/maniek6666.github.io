@@ -34,7 +34,7 @@ http://maniek6666.github.io/PSVITA/JB/index.html
 >.
 
 >.
-## HWNlo SKGleba oryginal files
+## HENlo_JB SKGleba oryginal files
 -----
  https://github.com/SKGleba/henlo_jb
 
