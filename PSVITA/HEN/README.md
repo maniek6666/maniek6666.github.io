@@ -1,3 +1,5 @@
+## Oryginall HENlo-JB od  SKGleba Full PL
+https://github.com/SKGleba/henlo_jb
 # henlo
 webkit-based jailbreak for Playstation Vita/TV on firmware 3.65+
 
@@ -8,3 +10,23 @@ visit ```deploy.psp2.dev``` using the Playstation Vita/TV web browser
 
 ## this project is currently in the beta phase
 focus: bootstrap stability and overall functionality
+
+## Linux Debian  PSVitaSDK:
+SDK Oficjall PSvita
+[VitaSDK]([https://dotnet.microsoft.com/en-us/download/dotnet](https://github.com/vitasdk))
+
+Install (Terminal):
+sudo apt-get install git
+sudo apt install curl
+sudo apt-get install cmake -y
+sudo apt upgrade python3
+sudo apt-get install flex
+sudo apt install bzip2 -y
+sudo apt install wget -y
+sudo apt-get install libz-dev
+sudo apt-get install xz-utils 
+sudo apt-get install xxd
++
+vita-libs-gen add_nids.yml add_nids
+cd add_nids
+make && make install
