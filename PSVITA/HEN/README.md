@@ -15,7 +15,7 @@ focus: bootstrap stability and overall functionality
 SDK Oficjall PSvita
 [VitaSDK]([https://dotnet.microsoft.com/en-us/download/dotnet](https://github.com/vitasdk))
 
-Install (Terminal):
+```Install (Terminal):
 sudo apt-get install git\n
 sudo apt install curl
 sudo apt-get install cmake -y
@@ -30,3 +30,4 @@ sudo apt-get install xxd
 vita-libs-gen add_nids.yml add_nids
 cd add_nids
 make && make install
+```
