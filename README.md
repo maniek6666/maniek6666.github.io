@@ -25,7 +25,7 @@ http://maniek6666.github.io/PS3/index.html
 >.
 
 >.
-## HENlo MOD For Mr.NOBODY PS3 (SKGleba Files)
+## HENlo_JB MOD FULL PL For PSVITA Mr.NOBODY (SKGleba Files + Polish Languages)
 -----
 - add Polish Languages
 http://maniek6666.github.io/PSVITA/JB/index.html
