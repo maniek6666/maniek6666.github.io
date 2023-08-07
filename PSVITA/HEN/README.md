@@ -12,9 +12,9 @@ visit ```deploy.psp2.dev``` using the Playstation Vita/TV web browser
 focus: bootstrap stability and overall functionality
 
 ## Linux Debian  PSVitaSDK:
-SDK Oficjall PSvita
+*  SDK Oficjall PSvita
 [VitaSDK]([https://dotnet.microsoft.com/en-us/download/dotnet](https://github.com/vitasdk))
-
+*
 ```Install (Terminal):
 sudo apt-get install git\n
 sudo apt install curl
