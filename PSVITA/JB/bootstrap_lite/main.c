@@ -70,7 +70,7 @@ enum E_MENU_OPTIONS {
     MENU_RESET_TAICFG,
     MENU_EXIT_W_SD2VITA
 };
-const char* menu_items[OPTION_COUNT] = { "Wyjdz", "Zainstaluj henkaku", "Zainstaluj VitaDeploy", "Zastap NEAR na VitaDeploy", "Zresetartuj taihen config.txt", "Wyjdz i zamontuj sd2vita jako ux0" };
+const char* menu_items[OPTION_COUNT] = { "Wyjdz", "Zainstaluj Henkaku", "Zainstaluj VitaDeploy", "Zamien NEAR na VitaDeploy", "Zresetartuj taihen config.txt", "Wyjdz i zamontuj sd2vita jako ux0" };
 
 int __attribute__((naked, noinline)) call_syscall(int a1, int a2, int a3, int num) {
     __asm__(
@@ -411,7 +411,7 @@ EXIT:
         COLORPRINTF(COLOR_YELLOW, BOOTSTRAP_VERSION_STR "\n");
         COLORPRINTF(COLOR_WHITE, "\n---------------------------------------------\n\n");
         printf(" > Niepowodzenie zaladowania taihen! 0x%08X\n", res);
-        printf(" > Uruchom ponownie exploita i wybierz „Zainstaluj HENkaku'.\n");
+        printf(" > Uruchom ponownie Exploita i wybierz Zainstaluj HENkaku.\n");
     }
 
     if (launch_gamesd) {
