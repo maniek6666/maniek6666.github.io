@@ -17,7 +17,7 @@ focus: bootstrap stability and overall functionality
 *
 ```Install (Terminal):
 sudo apt-get install git\n
-sudo apt install curl
+sudo apt install ```curl```
 sudo apt-get install cmake -y
 sudo apt upgrade python3
 sudo apt-get install flex
