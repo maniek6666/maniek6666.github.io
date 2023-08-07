@@ -16,7 +16,7 @@ SDK Oficjall PSvita
 [VitaSDK]([https://dotnet.microsoft.com/en-us/download/dotnet](https://github.com/vitasdk))
 
 Install (Terminal):
-sudo apt-get install git
+sudo apt-get install git\n
 sudo apt install curl
 sudo apt-get install cmake -y
 sudo apt upgrade python3
