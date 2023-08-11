@@ -9,7 +9,7 @@
     <string src="Porty" id="db_category_port" />
     <string src="Gry" id="db_category_game" />
     <string src="Aplikacje" id="db_category_app" />
-    <string src="Nrzedzie" id="db_category_single_util" />
+    <string src="Nrzędzie" id="db_category_single_util" />
     <string src="Emulator" id="db_category_single_emu" />
     <string src="Port" id="db_category_single_port" />
     <string src="Gra" id="db_category_single_game" />
