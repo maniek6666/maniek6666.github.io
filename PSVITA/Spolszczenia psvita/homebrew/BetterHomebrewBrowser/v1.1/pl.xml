@@ -43,7 +43,7 @@
     <string src="Pobieranie ikon..." id="msg_downloading_icon"/>
 
     <string src="Brak dostępnego opisu" id="msg_no_desc"/>
-    <string src="Pobieranie zostało dodane do kolejki ekranu głównego." id="msg_download_queued"/>
+    <string src="Pobieranie zostało dodane do kolejki na ekranie głównym." id="msg_download_queued"/>
     <string src="Nie można znaleźć prawidłowego źródła do pobrania." id="msg_src_err"/>
     <string src="%s Ikony" id="icons_dl_name"/>
     <string src="%s (Dane)" id="data_dl_name"/>
