@@ -27,7 +27,7 @@ var leaker_obj={a:0};var leaker_arr=new Uint32Array(6);var oob_slave=new Uint8Ar
 UA=navigator.userAgent.substring(navigator.userAgent.indexOf("6.72 (") + 28,navigator.userAgent.indexOf(") Apple"));
 
 function runJB(){
-ScrOverlay.style.display="block";CacheProgress.style.display="none";cacheUPDtxt.innerHTML="Ładowanie exploita, proszę czekać ...";
+ScrOverlay.style.display="block";CacheProgress.style.display="none";cacheUPDtxt.innerHTML="Ładowanie Exploita, Proszę czekać ...";
 setTimeout(jailbreak,2000);
 }
 if (UA=="6.72"&&window.applicationCache.status!='0'){runJB();}
@@ -49,8 +49,8 @@ if (UA=="6.72"&&window.applicationCache.status!='0'){runJB();}
 
 <div id=MainMenu class=MenuClass style=display:block>
 <div  PL-Title="☆ MIRAHEN ☆" PL-Bin="pl_MIRA.bin" PL-Ver="Mira Loader Orbis" PL-Desc="• Włączanie Homebrew (HEN)<br>• Rejestr emulowany (EmuReg) <br>• Emulowany NVS (EmuNVS) <br>• Kernel Debugger <br>•  Zdalny GDB <br>• Implementacja FUSE na poziomie systemowym (eksperymentalna, WIP) <br>• Załaduj moduły sprx + IAT + Funkcja Hooking (Dzięki theorywrong) " class="Box Icon"><img src="files/img/hen.png"></div
-><div PL-Title="☆ GOLDHEN ☆ - od SiSTRo"  PL-Bin="pl_HEN.bin"     PL-Ver="Wersja 2.4b17.3"    PL-Desc="• Dodano plik konfiguracyjny (/data/GoldHEN/config.ini) <br>• Dodano serwer Klog na porcie 3232 <br>• Ulepszona obsługa trybu uśpienia"  class="Box Icon"><img src="files/img/hen.svg"></div
-><div PL-Title="HEN v2.4b17.3" PL-Bin="pl_HENb.bin"    PL-Ver="v2.4b17.3 - od SiSTRo/Joonie86 - Mod od Leeful"              PL-Desc="Podobnie jak w przypadku HEN 2.1.3, ale naprawia to problem z pustymi trofeami u większości osób.<br>! Jeśli Twój PSVR ma najnowszą wersję oprogramowania, nie możesz używać tej wersji HEN, ale jeśli Twój PSVR ma starszą wersję oprogramowania, możesz to zrobić, ale najpierw musisz włączyć PSVR „przed” uruchomieniem tej wersji."  class="Box Icon"><img src="files/img/hen.svg"></div
+><div PL-Title="☆ GOLDHEN ☆"  PL-Bin="pl_HEN.bin"     PL-Ver="Wersja 2.4b17.3"    PL-Desc="• Dodano plik konfiguracyjny (/data/GoldHEN/config.ini) <br>• Dodano serwer Klog na porcie 3232 <br>• Ulepszona obsługa trybu uśpienia"  class="Box Icon"><img src="files/img/hen.svg"></div
+><div PL-Title="HEN v2.4b17.3 - od SiSTRo" PL-Bin="pl_HENb.bin"    PL-Ver="v2.4b17.3 - od SiSTRo/Joonie86 - Mod od Leeful"              PL-Desc="Podobnie jak w przypadku HEN 2.1.3, ale naprawia to problem z pustymi trofeami u większości osób.<br>! Jeśli Twój PSVR ma najnowszą wersję oprogramowania, nie możesz używać tej wersji HEN, ale jeśli Twój PSVR ma starszą wersję oprogramowania, możesz to zrobić, ale najpierw musisz włączyć PSVR „przed” uruchomieniem tej wersji."  class="Box Icon"><img src="files/img/hen.svg"></div
 ><div PL-Title="Bin Loader"  PL-Bin="BINLOADER"      PL-Ver="v1.0 - od OpenOrbis"                                       PL-Desc="Ładuje plik bin lub elf wysłany na adres IP PS4 na porcie9021.<br>Do przesyłania plików na PS4 zaleca się użycie Netcata lub Netcat GUI." class="Box Icon">&#xf019;</div
 ><div PL-Title="Serwer FTP"  PL-Bin="pl_FTP.bin"     PL-Ver="v1.3 - Oryginalna wersja autorstwa xVortex / Port 6.72 autorstwa Al Azif" PL-Desc="Pełny dostęp do serwera FTP dla PS4.<br>Połącz swojego klienta FTP z adresem IP podanym w wyświetlonym komunikacie.<br>Numer portu FTP to 1337." class="Box Icon"><img src="files/img/ftp.svg"></div
 ><div PL-Title="App2USB"     PL-Bin="pl_App2usb.bin" PL-Ver="v5.0 - Oryginalna wersja autorstwa Stooged / 6.72 Port od Al Azif" PL-Desc="Przenieś zainstalowane gry z wewnętrznego dysku twardego na zewnętrzny<br>Dysk USB sformatowany w systemie exFAT.<br>Umieść plik app2usb.ini w folderze o nazwie PS4 w katalogu głównym dysku USB.<br><br>" class="Box Icon">&#xf01c;</div
@@ -88,7 +88,7 @@ if (UA=="6.72"&&window.applicationCache.status!='0'){runJB();}
 ></div>
 
 <div id=DumperMenu class=MenuClass style=display:none>
-<div  PL-Title="Menu zrzucania gier" PL-Bin="INFO" PL-Ver="Informacje o menu:" PL-Desc="Zawiera Payloady umożliwiające zrzucanie gier z Twojej konsoli PS4, dzięki czemu możesz później tworzyć własne zmodyfikowane paczki PKG do zainstalowania." class="Box Icon">&#xf30f;</div
+<div  PL-Title="Menu kopii zapasowej gier" PL-Bin="INFO" PL-Ver="Informacje o menu:" PL-Desc="Zawiera Payloady umożliwiające zrzucanie gier z Twojej konsoli PS4, dzięki czemu możesz później tworzyć własne zmodyfikowane paczki PKG do zainstalowania." class="Box Icon">&#xf30f;</div
 ><div PL-Title="Zrzuć grę i aktualizacje"         PL-Bin="pl_DumperGU.bin" PL-Ver="v1.8 - Oryginalna wersja autorstwa xVortex / 6.72 Port oraz Mod od Leeful" PL-Desc="Zgraj gry i aplikacje na dysk USB, aby móc utworzyć pliki fpkg.<br><br>Ten payload zapisze grę i jej aktualizację (jeśli takowa istnieje) w dwóch oddzielnych folderach na dysku USB.<br>Ten payload nie wymaga żadnego pliku konfiguracyjnego!" class="Box Icon">&#xf1b3;</div
 ><div PL-Title="Zrzuć tylko grę"             PL-Bin="pl_DumperG.bin"  PL-Ver="v1.8 - Oryginalna wersja autorstwa xVortex / 6.72 Port oraz Mod od Leeful" PL-Desc="Zgraj gry i aplikacje na dysk USB, aby móc utworzyć pliki fpkg.<br><br>Ten payload zrzuci na dysk USB tylko Twoją grę.<br><br>Ten payload nie wymaga żadnego pliku konfiguracyjnego!" class="Box Icon">&#xf1b2;</div
 ><div PL-Title="Zrzuć tylko aktualizację"           PL-Bin="pl_DumperU.bin"  PL-Ver="v1.8 - Oryginalna wersja autorstwa xVortex / 6.72 Port oraz Mod od Leeful" PL-Desc="Zgraj gry i aplikacje na dysk USB, aby móc utworzyć pliki fpkg.<br><br>Ten payload zrzuci na dysk USB tylko aktualizację gry.<br><br>Do tego payload nie jest potrzebny żaden plik konfiguracyjny!" class="Box Icon">&#xf1b2;</div
