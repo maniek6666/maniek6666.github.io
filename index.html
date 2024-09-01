@@ -9,7 +9,7 @@ if (window.applicationCache.status=='0'){ScrOverlay.style.display="block";Loader
 function JBfail(){localStorage.failcount= ++localStorage.failcount;failCounter.innerHTML=localStorage.failcount;msgs.innerHTML = "Jailbreak failed! - Reboot your PS4 and try again.";alert("Ładowanie Jailbreak'a nie powiódł się!\n Uruchom ponownie PS4 i spróbuj ponownie.");}
 function JBpass(){
 localStorage.passcount= ++localStorage.passcount;passCounter.innerHTML=localStorage.passcount;
-cacheUPDtxt.innerHTML="Exploit Załadowano pomyślnie";
+cacheUPDtxt.innerHTML="Exploit załadowano pomyślnie";
 TargetMenu.style.left=-700;
 setTimeout(function(){TargetMenu.style.left=-40;},500);
 setTimeout(function(){TargetMenu.style.left=-700;},1000);
@@ -88,7 +88,7 @@ if (UA=="6.72"&&window.applicationCache.status!='0'){runJB();}
 ></div>
 
 <div id=DumperMenu class=MenuClass style=display:none>
-<div  PL-Title="Menu zrzucania gier" PL-Bin="INFO" PL-Ver="Informacje o menu:" PL-Desc="Zawiera Payload umożliwiające zrzucanie gier z Twojej konsoli PS4, dzięki czemu możesz później tworzyć własne zmodyfikowane paczki PKG do zainstalowania." class="Box Icon">&#xf30f;</div
+<div  PL-Title="Menu zrzucania gier" PL-Bin="INFO" PL-Ver="Informacje o menu:" PL-Desc="Zawiera Payloady umożliwiające zrzucanie gier z Twojej konsoli PS4, dzięki czemu możesz później tworzyć własne zmodyfikowane paczki PKG do zainstalowania." class="Box Icon">&#xf30f;</div
 ><div PL-Title="Zrzuć grę i aktualizacje"         PL-Bin="pl_DumperGU.bin" PL-Ver="v1.8 - Oryginalna wersja autorstwa xVortex / 6.72 Port oraz Mod od Leeful" PL-Desc="Zgraj gry i aplikacje na dysk USB, aby móc utworzyć pliki fpkg.<br><br>Ten payload zapisze grę i jej aktualizację (jeśli takowa istnieje) w dwóch oddzielnych folderach na dysku USB.<br>Ten payload nie wymaga żadnego pliku konfiguracyjnego!" class="Box Icon">&#xf1b3;</div
 ><div PL-Title="Zrzuć tylko grę"             PL-Bin="pl_DumperG.bin"  PL-Ver="v1.8 - Oryginalna wersja autorstwa xVortex / 6.72 Port oraz Mod od Leeful" PL-Desc="Zgraj gry i aplikacje na dysk USB, aby móc utworzyć pliki fpkg.<br><br>Ten payload zrzuci na dysk USB tylko Twoją grę.<br><br>Ten payload nie wymaga żadnego pliku konfiguracyjnego!" class="Box Icon">&#xf1b2;</div
 ><div PL-Title="Zrzuć tylko aktualizację"           PL-Bin="pl_DumperU.bin"  PL-Ver="v1.8 - Oryginalna wersja autorstwa xVortex / 6.72 Port oraz Mod od Leeful" PL-Desc="Zgraj gry i aplikacje na dysk USB, aby móc utworzyć pliki fpkg.<br><br>Ten payload zrzuci na dysk USB tylko aktualizację gry.<br><br>Do tego payload nie jest potrzebny żaden plik konfiguracyjny!" class="Box Icon">&#xf1b2;</div
