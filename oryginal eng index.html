@@ -1,15 +1,15 @@
 <html>
 <head>
-<title>PS-Phive! (Dla PS4 6.72) v1.0.2 PL od Leeful mod od spy oraz tłumaczenie PL maniek6666</title>
+<title>PS-Phive! (FOR PS4 6.72) v1.0 By Leeful mod by spy</title>
 <link rel="stylesheet prefetch" href="files/style.css">
 <div id=ScrOverlay class=cacheUPDbg><pre id=cacheUPDtxt class=cacheUPDtext></pre><div id=CacheProgress><div id=CacheBar></div></div></div>
 <div id=Loader class=Loader></div>
 <script>
 if (window.applicationCache.status=='0'){ScrOverlay.style.display="block";Loader.innerHTML='<object type="text/html" data="files/installCache.html" style="width:265px; height:56px;"></object>';}
-function JBfail(){localStorage.failcount= ++localStorage.failcount;failCounter.innerHTML=localStorage.failcount;msgs.innerHTML = "Jailbreak failed! - Reboot your PS4 and try again.";alert("Ładowanie Jailbreak'a nie powiódł się!\n Uruchom ponownie PS4 i spróbuj ponownie.");}
+function JBfail(){localStorage.failcount= ++localStorage.failcount;failCounter.innerHTML=localStorage.failcount;msgs.innerHTML = "Jailbreak failed! - Reboot your PS4 and try again.";alert("Jailbreak failed!\n Reboot your PS4 and try again.");}
 function JBpass(){
 localStorage.passcount= ++localStorage.passcount;passCounter.innerHTML=localStorage.passcount;
-cacheUPDtxt.innerHTML="Exploit Załadowano pomyślnie";
+cacheUPDtxt.innerHTML="Exploit Loaded Successfully";
 TargetMenu.style.left=-700;
 setTimeout(function(){TargetMenu.style.left=-40;},500);
 setTimeout(function(){TargetMenu.style.left=-700;},1000);
@@ -27,7 +27,7 @@ var leaker_obj={a:0};var leaker_arr=new Uint32Array(6);var oob_slave=new Uint8Ar
 UA=navigator.userAgent.substring(navigator.userAgent.indexOf("6.72 (") + 28,navigator.userAgent.indexOf(") Apple"));
 
 function runJB(){
-ScrOverlay.style.display="block";CacheProgress.style.display="none";cacheUPDtxt.innerHTML="Ładowanie exploita, proszę czekać ...";
+ScrOverlay.style.display="block";CacheProgress.style.display="none";cacheUPDtxt.innerHTML="Loading Exploit, Please Wait ...";
 setTimeout(jailbreak,2000);
 }
 if (UA=="6.72"&&window.applicationCache.status!='0'){runJB();}
@@ -35,52 +35,52 @@ if (UA=="6.72"&&window.applicationCache.status!='0'){runJB();}
 </head>
 <body>
 <div id=MenuSelection onmouseenter=SetMenuButton()>
-<div class=but2> Główne Menu </div>&nbsp;&nbsp;
-<div class=but0> Narzędzia </div>&nbsp;&nbsp;
-<div class=but0> Kopia zapasowa </div>&nbsp;&nbsp;
-<div class=but0> Przywracanie </div>&nbsp;&nbsp;
-<div class=but0> Zrzuty </div>&nbsp;&nbsp;
+<div class=but2> Main </div>&nbsp;&nbsp;
+<div class=but0> Tools </div>&nbsp;&nbsp;
+<div class=but0> Backup </div>&nbsp;&nbsp;
+<div class=but0> Restore </div>&nbsp;&nbsp;
+<div class=but0> Dumper </div>&nbsp;&nbsp;
 <div class=but0> Spoof </div>&nbsp;&nbsp;
-<div class=but0> Modyfikacje gry </div>&nbsp;&nbsp;
+<div class=but0> Game Mods </div>&nbsp;&nbsp;
 <div class=but0> Linux </div>
 </div>
 
 <div id=MenuContainer class=MenuContainer onclick=GetInfo()>
 
 <div id=MainMenu class=MenuClass style=display:block>
-<div  PL-Title="☆ MIRAHEN ☆" PL-Bin="pl_MIRA.bin" PL-Ver="Mira Loader Orbis" PL-Desc="● Włączanie Homebrew (HEN)<br>● Rejestr emulowany (EmuReg) <br>● Emulowany NVS (EmuNVS) <br>● Kernel Debugger <br>● Zdalny GDB <br>● Implementacja FUSE na poziomie systemowym (eksperymentalna, WIP) <br>● Załaduj moduły sprx + IAT + Funkcja Hooking (Dzięki theorywrong) " class="Box Icon"><img src="files/img/hen.png"></div
-><div PL-Title="☆ GOLDHEN ☆ - od SiSTRo"  PL-Bin="pl_HEN.bin"     PL-Ver="Wersja 2.4b17.3"    PL-Desc="● Dodano plik konfiguracyjny (/data/GoldHEN/config.ini) <br>● Dodano serwer Klog na porcie 3232 <br>● Ulepszona obsługa trybu uśpienia"  class="Box Icon"><img src="files/img/hen.svg"></div
-><div PL-Title="HEN v2.4b17.3" PL-Bin="pl_HENb.bin"    PL-Ver="v2.4b17.3 - od SiSTRo/Joonie86 - Mod od Leeful"              PL-Desc="Podobnie jak w przypadku HEN 2.1.3, ale naprawia to problem z pustymi trofeami u większości osób.<br>! Jeśli Twój PSVR ma najnowszą wersję oprogramowania, nie możesz używać tej wersji HEN, ale jeśli Twój PSVR ma starszą wersję oprogramowania, możesz to zrobić, ale najpierw musisz włączyć PSVR „przed” uruchomieniem tej wersji."  class="Box Icon"><img src="files/img/hen.svg"></div
-><div PL-Title="Bin Loader"  PL-Bin="BINLOADER"      PL-Ver="v1.0 - od OpenOrbis"                                       PL-Desc="Ładuje plik bin lub elf wysłany na adres IP PS4 na porcie9021.<br>Do przesyłania plików na PS4 zaleca się użycie Netcata lub Netcat GUI." class="Box Icon">&#xf019;</div
-><div PL-Title="Serwer FTP"  PL-Bin="pl_FTP.bin"     PL-Ver="v1.3 - Oryginalna wersja autorstwa xVortex / Port 6.72 autorstwa Al Azif" PL-Desc="Pełny dostęp do serwera FTP dla PS4.<br>Połącz swojego klienta FTP z adresem IP podanym w wyświetlonym komunikacie.<br>Numer portu FTP to 1337." class="Box Icon"><img src="files/img/ftp.svg"></div
-><div PL-Title="App2USB"     PL-Bin="pl_App2usb.bin" PL-Ver="v5.0 - Oryginalna wersja autorstwa Stooged / 6.72 Port od Al Azif" PL-Desc="Przenieś zainstalowane gry z wewnętrznego dysku twardego na zewnętrzny<br>Dysk USB sformatowany w systemie exFAT.<br>Umieść plik app2usb.ini w folderze o nazwie PS4 w katalogu głównym dysku USB.<br><br>" class="Box Icon">&#xf01c;</div
-><div PL-Title="FakeUSB"     PL-Bin="pl_FakeUSB.bin" PL-Ver="v1.0 - od Sleirsgoevy / Mod od Leeful"                     PL-Desc="Zezwól na instalację plików PKG z wewnętrznego dysku twardego konsoli PS4.<br>Przydatne, jeśli Twój dysk USB nie jest wystarczająco duży dla określonego pliku .pkg.<br>1. Skopiuj pliki .pkg do /user/home/fakeusb/ via FTP.<br>2. Otwórz Debug Settings > Game > Package > Package Installer.<br>3. Wróć tutaj i uruchom FakeUSB.<br>Teraz instalator pakietów zobaczy pakiety PKG na wewnętrznym dysku twardym." class="Box Icon">&#xf079;</div
+<div  PL-Title="MIRAHEN" PL-Bin="pl_MIRA.bin" PL-Ver="Mira Loader Orbis" PL-Desc="Homebrew Enabler (HEN)<br> Emulated Registry (EmuReg) <br> Emulated NVS (EmuNVS) <br> Kernel Debugger <br> Remote GDB <br> System-level FUSE implementation (Experimental, WIP) <br> Load sprx modules + IAT + Function Hooking (Thanks theorywrong) " class="Box Icon"><img src="files/img/hen.png"></div
+><div PL-Title="GOLDHEN v2.1"  PL-Bin="pl_HEN.bin"     PL-Ver="v2.1 - By SiSTRo"    PL-Desc="Added config file (/data/GoldHEN/config.ini) <br>Added Klog server on 3232 port <br>Improved rest mode support"  class="Box Icon"><img src="files/img/hen.svg"></div
+><div PL-Title="HEN v2.1.3b" PL-Bin="pl_HENb.bin"    PL-Ver="v2.1.3b - By SiSTRo/Joonie86 - Mod By Leeful"              PL-Desc="Same as HEN 2.1.3 but this fixes the blank trophy issue for most people.<br>! If your PSVR is updated to the latest firmware version you cannot use this version of HEN but if your PSVR is on an earlier firmware version you can but you must turn on your PSVR 'before' running this."  class="Box Icon"><img src="files/img/hen.svg"></div
+><div PL-Title="Bin Loader"  PL-Bin="BINLOADER"      PL-Ver="v1.0 - By OpenOrbis"                                       PL-Desc="Loads a bin or elf file sent to the PS4 IP address on port 9021.<br>Netcat or Netcat GUI is recommended to send the files to the PS4." class="Box Icon">&#xf019;</div
+><div PL-Title="FTP Server"  PL-Bin="pl_FTP.bin"     PL-Ver="v1.3 - Original Version By xVortex / 6.72 Port By Al Azif" PL-Desc="A full access FTP server for the PS4.<br>Connect your FTP client to the IP address that the popup message tells you.<br>The FTP port number is 1337." class="Box Icon"><img src="files/img/ftp.svg"></div
+><div PL-Title="App2USB"     PL-Bin="pl_App2usb.bin" PL-Ver="v5.0 - Original Version By Stooged / 6.72 Port By Al Azif" PL-Desc="Move installed games from your internal HDD to an external <br>exFAT formatted USB drive.<br>Put app2usb.ini in a folder named PS4 on root of your USB drive.<br><br>" class="Box Icon">&#xf01c;</div
+><div PL-Title="FakeUSB"     PL-Bin="pl_FakeUSB.bin" PL-Ver="v1.0 - By Sleirsgoevy / Mod By Leeful"                     PL-Desc="Allow PKG's to be installed from the PS4's Internal HDD.<br>Useful if your USB drive is not large enough for a certain .pkg file.<br>1. Copy your .pkg files to /user/home/fakeusb/ via FTP.<br>2. Open Debug Settings > Game > Package > Package Installer.<br>3. Come back here and run FakeUSB.<br>Now Package Installer will see the PKG's on your internal HDD." class="Box Icon">&#xf079;</div
 ></div>
 
 <div id=ToolsMenu class=MenuClass style=display:none>
-<div  PL-Title="Toolbox" PL-Bin="pl_OT.bin" PL-Ver="Toolbox Orbis:" PL-Desc=" Mam nadzieję, że naprawia więcej problemów z RAM i VRAM. Ich całkowita użyteczność może jeszcze nie być poprawna <br> RAM i VRAM teraz pokazują procent wykorzystania <br> Loader nie musi teraz przeładowywać interfejsu użytkownika. Nadal wymaga testów, jeśli ludzie mają problemy z konfiguracją lub ikonami, które nie działają, dlatego dodano wątek do monitorowania statystyk systemu, aby mieć nadzieję, że odciąży to wątek renderowania." class="Box Icon"><img src="files/img/tools.png"></div
-><div PL-Title="Sterowanie wentylatorem"     PL-Bin="" PL-Ver="v4.0 - od Leeful"                                                               PL-Desc="Ustaw żądaną temperaturę, przy której uruchomi się wentylator PS4.<br>Możesz przesuwać suwak za pomocą przycisków kierunkowych w górę, w dół lub w lewo i w prawo.<br>Ustawiona wartość będzie obowiązywać do momentu odłączenia zasilania od PS4.<br><br>Domyślne ustawienie PS4 to 79&#176;" class="Box Icon"><img src="files/img/FanControl.svg"></div
-><div PL-Title="PS4Debug"        PL-Bin="pl_PS4debug.bin" PL-Ver="v1.2.1 - od GiantPluto"                                          PL-Desc="PS4Debug dla SaveMounter i Profile Activator." class="Box Icon">&#xf188;</div
-><div PL-Title="Zrzut Kernel'a"   PL-Bin="pl_KernelDumper.bin" PL-Ver="v1.0 - Oryginalna wersja autorstwa Eversion / 6.72 Port od Al Azif"  PL-Desc="Zgraj kopię jądra na dysk USB.<br><br>Jądro zostanie zrzucone do: KernelDump.bin na twoim dysku USB." class="Box Icon">&#xf828;</div
-><div PL-Title="Blokada historii" PL-Bin="pl_HistoryBlocker.bin" PL-Ver="v2.0 - Wersja oryginalna autorstwa Stooged / 6.72 Port od Al Azif" PL-Desc="Wyłącz automatyczne otwieranie ostatnio używanej strony w przeglądarce internetowej PS4.<br><br>Aby wyłączyć tę funkcję, uruchom payload ponownie." class="Box Icon">&#xf686;</div
-><div PL-Title="Wyłącz aktualizacje" PL-Bin="pl_UpdatesDisable.bin" PL-Ver="v1.0 - od Al Azif"                                         PL-Desc="Tworzy pliki fikcyjne w folderze aktualizacji PS4, aby zapobiec pobieraniu niechcianych aktualizacji systemu.<br>Usuwa również wszystkie istniejące aktualizacje, jeśli już istnieją.<br><br>! Musisz to uruchomić tylko raz !" class="Box Icon">&#xf771;</div
-><div PL-Title="Włącz aktualizacje"  PL-Bin="pl_UpdatesEnable.bin" PL-Ver="v1.0 - od Al Azif"                                          PL-Desc="Usuwa pliki zastępcze w folderze aktualizacji PS4, aby ponownie umożliwić pobieranie aktualizacji.<br><br>Uruchom to, jeśli wcześniej wyłączyłeś aktualizacje i chcesz zaktualizować konsolę." class="Box Icon">&#xf772;</div
+<div  PL-Title="Toolbox" PL-Bin="pl_OT.bin" PL-Ver="Toolbox Orbis:" PL-Desc=" Fixes hopefully more issues with RAM and VRAM. Their total usagable may not be correct yet <br> RAM and VRAM now show percentage of usage <br> Loader now does not need to reload the UI. Still needs testing, if people have issues with Configs or Icons not working this is why Adds a thread for monitoring system statistics to hopefully take the load off the render thread." class="Box Icon"><img src="files/img/tools.png"></div
+><div PL-Title="Fan Control"     PL-Bin="" PL-Ver="v4.0 - By Leeful"                                                               PL-Desc="Set the desired temperature that the PS4 fan starts.<br>You can move the slider by using the D-Pad Up & Down or Left & Right.<br>The value you set will remain until the power is removed from the PS4.<br><br>The default PS4 setting is 79&#176;" class="Box Icon"><img src="files/img/FanControl.svg"></div
+><div PL-Title="PS4Debug"        PL-Bin="pl_PS4debug.bin" PL-Ver="v1.2.1 - By GiantPluto"                                          PL-Desc="PS4Debug for SaveMounter and Profile Activator." class="Box Icon">&#xf188;</div
+><div PL-Title="Kernel Dumper"   PL-Bin="pl_KernelDumper.bin" PL-Ver="v1.0 - Original Version By Eversion / 6.72 Port By Al Azif"  PL-Desc="Dump a copy of your kernel to your USB drive.<br><br>Your kernel will be dumped to: KernelDump.bin on your USB drive." class="Box Icon">&#xf828;</div
+><div PL-Title="History Blocker" PL-Bin="pl_HistoryBlocker.bin" PL-Ver="v2.0 - Original Version By Stooged / 6.72 Port By Al Azif" PL-Desc="Disable the auto opening of the last page used in the PS4 WebBrowser.<br><br>Run the payload again to disable this feature." class="Box Icon">&#xf686;</div
+><div PL-Title="Disable Updates" PL-Bin="pl_UpdatesDisable.bin" PL-Ver="v1.0 - By Al Azif"                                         PL-Desc="Creates dummy files in the PS4 update folder to prevent the download of unwanted system updates.<br>It also deletes any existing updates if they already exist.<br><br>! You only ever have to run this once !" class="Box Icon">&#xf771;</div
+><div PL-Title="Enable Updates"  PL-Bin="pl_UpdatesEnable.bin" PL-Ver="v1.0 - By Al Azif"                                          PL-Desc="Removes the dummy files in the PS4 update folder to enable the download of updates again.<br><br>Run this if you have previously disabled updates and wish to update your console." class="Box Icon">&#xf772;</div
 ></div>
 
 <div id=BackupMenu class=MenuClass style=display:none>
-<div  PL-Title="Menu kopii zapasowej" PL-Bin="INFO" PL-Ver="Informacje o menu:" PL-Desc="Contains various payloads to backup all aspect of useful things on your PS4.<br><br>NOTE! These backups will only work on your current Profile and accountID!<br>If you plan to initialize or replace your HDD you must also make a backup of your existing profile using the official backup/restore app in system settings!" class="Box Icon">&#xf30f;</div
-><div PL-Title="Kopia zapasowa bazy danych"      PL-Bin="pl_DBbackup.bin"           PL-Ver="v1.0 - od Leeful" PL-Desc="Utwórz kopię zapasową ważnych plików bazy danych.<br><br>Kopia zapasowa baz danych aplikacji zostanie utworzona i zapisana na dysku twardym konsoli PS4, a także na nośniku USB, jeśli podłączono dysk USB." class="Box Icon">&#xf56e;</div
-><div PL-Title="Zapisz kopię zapasową danych"     PL-Bin="pl_SaveDataBackup.bin"     PL-Ver="v1.0 - od Leeful" PL-Desc="Utwórz kopię zapasową wszystkich bieżących danych gier. Zapisz je na dysku USB.<br><br>UWAGA! Ta kopia zapasowa będzie działać tylko na Twoim obecnym profilu i accountID!<br>Jeśli planujesz zainicjować lub wymienić dysk twardy, musisz także wykonać kopię zapasową istniejącego profilu, korzystając z oficjalnej aplikacji do tworzenia kopii zapasowych/przywracania dostępnej w ustawieniach systemowych!" class="Box Icon">&#xf2f5;</div
-><div PL-Title="Kopia zapasowa trofeów"        PL-Bin="pl_TrophyBackup.bin"       PL-Ver="v1.0 - od Leeful" PL-Desc="Utwórz kopię zapasową danych Trofeów na dysku USB.<br><br>UWAGA! Ta kopia zapasowa będzie działać tylko na Twoim obecnym profilu i accountID!<br>Jeśli planujesz zainicjować lub wymienić dysk twardy, musisz także wykonać kopię zapasową istniejącego profilu, korzystając z oficjalnej aplikacji do tworzenia kopii zapasowych/przywracania dostępnej w ustawieniach systemowych!" class="Box Icon">&#xf091;</div
-><div PL-Title="Kopia zapasowa pamięci podręcznej offline" PL-Bin="pl_OfflineCacheBackup.bin" PL-Ver="v1.0 - od Leeful" PL-Desc="Utwórz kopię zapasową pamięci podręcznej offline.<br><br>Jeśli podłączysz dysk USB, na nośniku USB zostanie utworzona kopia zapasowa pliku ApplicationCache.db." class="Box Icon">&#xf0ed;</div
-><div PL-Title="Kopia zapasowa awatara"        PL-Bin="pl_AvatarBackup.bin"       PL-Ver="v1.0 - Bod Leeful" PL-Desc="Utwórz kopię zapasową obrazów awatara swojego profilu na dysku USB.<br><br>Pliki zostaną zrzucone do folderu Avatar_Backup/0xProfileID na Twoim dysku USB." class="Box Icon">&#xf6e9;</div
-><div PL-Title="Kopia zapasowa aktualizacji dysku twardego"   PL-Bin="pl_HDD_Backup.bin"         PL-Ver="v1.0 - od Leeful" PL-Desc="Jeśli inicjalizujesz lub uaktualniasz dysk twardy, przenieś wszystkie swoje zapisy i trofea.<br><br>1. Użyj tego payload, aby wykonać kopię zapasową wszystkich zapisanych gier i trofeów.<br>2. Użyj oficjalnej aplikacji do tworzenia kopii zapasowych/przywracania danych na PS4, aby UTWORZYĆ KOPIĘ ZAPASOWĄ swojego profilu.<br>3. Zainstaluj nowy dysk twardy i wersje oprogramowanie systemu recovery o tym samym numerze który posiadamy.<br>4. Użyj oficjalnej aplikacji do tworzenia kopii zapasowych/przywracania PS4, aby PRZYWRÓCIĆ swój profil.<br>5. Użyj pakietu „Przywracanie aktualizacji dysku twardego”, aby przywrócić wszystkie dane." class="Box Icon">&#xf311;</div
+<div  PL-Title="Backup Menu" PL-Bin="INFO" PL-Ver="Menu Info:" PL-Desc="Contains various payloads to backup all aspect of useful things on your PS4.<br><br>NOTE! These backups will only work on your current Profile and accountID!<br>If you plan to initialize or replace your HDD you must also make a backup of your existing profile using the official backup/restore app in system settings!" class="Box Icon">&#xf30f;</div
+><div PL-Title="Database Backup"      PL-Bin="pl_DBbackup.bin"           PL-Ver="v1.0 - By Leeful" PL-Desc="Create a backup of important database files.<br><br>A backup of your app databases will be created and saved internally on your PS4 HDD and also to USB if a USB drive is inserted." class="Box Icon">&#xf56e;</div
+><div PL-Title="Save Data Backup"     PL-Bin="pl_SaveDataBackup.bin"     PL-Ver="v1.0 - By Leeful" PL-Desc="Create a backup of all your current game Save data to a USB drive.<br><br>NOTE! This backup will only work on your current Profile and accountID!<br>If you plan to initialize or replace your HDD you must also make a backup of your existing profile using the official backup/restore app in system settings!" class="Box Icon">&#xf2f5;</div
+><div PL-Title="Trophy Backup"        PL-Bin="pl_TrophyBackup.bin"       PL-Ver="v1.0 - By Leeful" PL-Desc="Create a backup of your Trophy data to a USB drive.<br><br>NOTE! This backup will only work on your current Profile and accountID!<br>If you plan to initialize or replace your HDD you must also make a backup of your existing profile using the official backup/restore app in system settings!" class="Box Icon">&#xf091;</div
+><div PL-Title="Offline Cache Backup" PL-Bin="pl_OfflineCacheBackup.bin" PL-Ver="v1.0 - By Leeful" PL-Desc="Create a backup of your Offline Cache.<br><br>A backup of your ApplicationCache.db will be created to USB if a USB drive is inserted." class="Box Icon">&#xf0ed;</div
+><div PL-Title="Avatar Backup"        PL-Bin="pl_AvatarBackup.bin"       PL-Ver="v1.0 - By Leeful" PL-Desc="Create a backup of your profile Avatar images to a USB drive.<br><br>Files will be dumped to Avatar_Backup/0xProfileID folder on your USB drive." class="Box Icon">&#xf6e9;</div
+><div PL-Title="HDD Upgrade Backup"   PL-Bin="pl_HDD_Backup.bin"         PL-Ver="v1.0 - By Leeful" PL-Desc="Transfer all your saves and trophies if you are initializing or upgrading your HDD.<br><br>1. Use this payload to backup all your saves and trophies.<br>2. Use the official PS4 backup/restore app to BACKUP your profile.<br>3. Install your new HDD and recovery Firmware.<br>4. Use the official PS4 backup/restore app to RESTORE your profile.<br>5. Use the 'HDD Upgrade Restore' payload to restore all your data." class="Box Icon">&#xf311;</div
 ></div>
 
 <div id=RestoreMenu class=MenuClass style=display:none>
-<div  PL-Title="Menu przywracania" PL-Bin="INFO" PL-Ver="Menu Info:" PL-Desc="Contains various payloads to restore all aspect of useful things on your PS4." class="Box Icon">&#xf30f;</div
-><div PL-Title="Przywracanie bazy danych"      PL-Bin="pl_DBrestore.bin"           PL-Ver="v1.0 - By Leeful" PL-Desc="Restore a backup of the database files created by 'Database Backup'<br><br>The backup will be restored from either the Internal HDD or from USB if a USB drive is inserted.<br>If a USB drive is inserted, the backup on the USB will be the one used to restore." class="Box Icon">&#xf56f;</div
-><div PL-Title="Przywracanie Save Data Restore"     PL-Bin="pl_SaveDataRestore.bin"     PL-Ver="v1.0 - By Leeful" PL-Desc="Restore a backup of all your game Save data from a USB drive." class="Box Icon">&#xf2f6;</div
+<div  PL-Title="Restore Menu" PL-Bin="INFO" PL-Ver="Menu Info:" PL-Desc="Contains various payloads to restore all aspect of useful things on your PS4." class="Box Icon">&#xf30f;</div
+><div PL-Title="Database Restore"      PL-Bin="pl_DBrestore.bin"           PL-Ver="v1.0 - By Leeful" PL-Desc="Restore a backup of the database files created by 'Database Backup'<br><br>The backup will be restored from either the Internal HDD or from USB if a USB drive is inserted.<br>If a USB drive is inserted, the backup on the USB will be the one used to restore." class="Box Icon">&#xf56f;</div
+><div PL-Title="Save Data Restore"     PL-Bin="pl_SaveDataRestore.bin"     PL-Ver="v1.0 - By Leeful" PL-Desc="Restore a backup of all your game Save data from a USB drive." class="Box Icon">&#xf2f6;</div
 ><div PL-Title="Trophy Restore"        PL-Bin="pl_TrophyRestore.bin"       PL-Ver="v1.0 - By Leeful" PL-Desc="Restore a backup of your Trophy data from a USB drive." class="Box Icon">&#xf2eb;</div
 ><div PL-Title="Offline Cache Restore" PL-Bin="pl_OfflineCacheRestore.bin" PL-Ver="v1.0 - By Leeful" PL-Desc="Restore a backup of your Offline Cache from USB.'<br><br><br>This can also be used to inject any ApplicationCache.db to your PS4. Just place the file in a folder named OfflineCache_Backup on your USB drive." class="Box Icon">&#xf0ee;</div
 ><div PL-Title="Avatar Restore"        PL-Bin="pl_AvatarRestore.bin"       PL-Ver="v1.0 - By Leeful" PL-Desc="Restore a backup of your Avatar files to your PS4" class="Box Icon">&#xf809;</div
@@ -88,24 +88,24 @@ if (UA=="6.72"&&window.applicationCache.status!='0'){runJB();}
 ></div>
 
 <div id=DumperMenu class=MenuClass style=display:none>
-<div  PL-Title="Menu zrzucania gier" PL-Bin="INFO" PL-Ver="Informacje o menu:" PL-Desc="Zawiera Payload umożliwiające zrzucanie gier z Twojej konsoli PS4, dzięki czemu możesz później tworzyć własne zmodyfikowane paczki PKG do zainstalowania." class="Box Icon">&#xf30f;</div
-><div PL-Title="Zrzuć grę i aktualizacje"         PL-Bin="pl_DumperGU.bin" PL-Ver="v1.8 - Oryginalna wersja autorstwa xVortex / 6.72 Port oraz Mod od Leeful" PL-Desc="Zgraj gry i aplikacje na dysk USB, aby móc utworzyć pliki fpkg.<br><br>Ten payload zapisze grę i jej aktualizację (jeśli takowa istnieje) w dwóch oddzielnych folderach na dysku USB.<br>Ten payload nie wymaga żadnego pliku konfiguracyjnego!" class="Box Icon">&#xf1b3;</div
-><div PL-Title="Zrzuć tylko grę"             PL-Bin="pl_DumperG.bin"  PL-Ver="v1.8 - Oryginalna wersja autorstwa xVortex / 6.72 Port oraz Mod od Leeful" PL-Desc="Zgraj gry i aplikacje na dysk USB, aby móc utworzyć pliki fpkg.<br><br>Ten payload zrzuci na dysk USB tylko Twoją grę.<br><br>Ten payload nie wymaga żadnego pliku konfiguracyjnego!" class="Box Icon">&#xf1b2;</div
-><div PL-Title="Zrzuć tylko aktualizację"           PL-Bin="pl_DumperU.bin"  PL-Ver="v1.8 - Oryginalna wersja autorstwa xVortex / 6.72 Port oraz Mod od Leeful" PL-Desc="Zgraj gry i aplikacje na dysk USB, aby móc utworzyć pliki fpkg.<br><br>Ten payload zrzuci na dysk USB tylko aktualizację gry.<br><br>Do tego payload nie jest potrzebny żaden plik konfiguracyjny!" class="Box Icon">&#xf1b2;</div
-><div PL-Title="Zrzut + łączenie gry + aktualizacji" PL-Bin="pl_DumperM.bin"  PL-Ver="v1.8 - Oryginalna wersja autorstwa xVortex / 6.72 Port oraz Mod od Leeful" PL-Desc="Zgraj gry i aplikacje na dysk USB, aby móc utworzyć pliki fpkg.<br><br>ten payload zrzuci Twoją grę i jej aktualizację (jeśli takowa istnieje) i połączy je w jeden folder na Twoim dysku USB.<br>Ten payload nie wymaga żadnego pliku konfiguracyjnego!" class="Box Icon">&#xf1b3;</div
+<div  PL-Title="Game Dumper Menu" PL-Bin="INFO" PL-Ver="Menu Info:" PL-Desc="Contains payloads to dump games from your PS4 <br>so that you can then build your own fake packages that you can install." class="Box Icon">&#xf30f;</div
+><div PL-Title="Dump Game & Update"         PL-Bin="pl_DumperGU.bin" PL-Ver="v1.8 - Original Version By xVortex / 6.72 Port and Mod By Leeful" PL-Desc="Dump your games or apps to a USB drive to be able to create fpkg files.<br><br>This payload will dump your game and game update (if there is one) into two seperate folders on your USB drive.<br>No config file is needed with this payload!" class="Box Icon">&#xf1b3;</div
+><div PL-Title="Dump Game Only"             PL-Bin="pl_DumperG.bin"  PL-Ver="v1.8 - Original Version By xVortex / 6.72 Port and Mod By Leeful" PL-Desc="Dump your games or apps to a USB drive to be able to create fpkg files.<br><br>This payload will dump just your game on your USB drive.<br><br>No config file is needed with this payload!" class="Box Icon">&#xf1b2;</div
+><div PL-Title="Dump Update Only"           PL-Bin="pl_DumperU.bin"  PL-Ver="v1.8 - Original Version By xVortex / 6.72 Port and Mod By Leeful" PL-Desc="Dump your games or apps to a USB drive to be able to create fpkg files.<br><br>This payload will dump just your game update to your USB drive.<br><br>No config file is needed with this payload!" class="Box Icon">&#xf1b2;</div
+><div PL-Title="Dump & Merge Game + Update" PL-Bin="pl_DumperM.bin"  PL-Ver="v1.8 - Original Version By xVortex / 6.72 Port and Mod By Leeful" PL-Desc="Dump your games or apps to a USB drive to be able to create fpkg files.<br><br>This payload will dump your game and game update (if there is one) and merge them into one folder on your USB drive.<br>No config file is needed with this payload!" class="Box Icon">&#xf1b3;</div
 ></div>
 
 <div id=SpoofMenu class=MenuClass style=display:none>
-<div  PL-Title="Menu Spoofera systemu" PL-Bin="INFO" PL-Ver="Informacje o menu:" PL-Desc="Zawiera payloady umożliwiające podszywanie się pod różne wersje systemu na Twojej konsoli PS4." class="Box Icon">&#xf30f;</div
-><div PL-Title="Firmware Spoofer" PL-Bin=""                PL-Ver="v1.0 - od Leeful"     PL-Desc="Spoofer podmienia wersję oprogramowania PS4 na dowolną wartość z zakresu od 0,00 do 99,99<br><br>Jest to przydatny spoofer oprogramowania, aby umożliwić działanie PSVR, a także do celów testowych dla deweloperów, ale NIE pozwoli to na granie w gry z nowszymi wersjami oprogramowania na PS4!!" class="Box Icon">&#xf661;</div
-><div PL-Title="To-DEX"           PL-Bin="pl_ToDEX.bin"    PL-Ver="v1.0 - od notzecoxao" PL-Desc="Konwertuje Target ID do (DEX)<br><br>Dodaje nowe opcje w menu informacji o grze, umożliwiające odinstalowanie tylko DLC lub tylko aktualizacji gry.<br>Aby usunąć funkcje debugowania wystarczy ponownie uruchomić konsolę lub uruchomić To-Retail." class="Box Icon">&#xf7f9;</div
-><div PL-Title="To-DEV"           PL-Bin="pl_ToDEV.bin"    PL-Ver="v1.0 - od notzecoxao" PL-Desc="Konwertuje Target ID docelowy na (DEV)<br><br>Dodaje nowe opcje w menu informacji o grze, umożliwiające odinstalowanie tylko DLC lub tylko aktualizacji gry.<br>Aby usunąć funkcje debugowania wystarczy ponownie uruchomić konsolę lub uruchomić To-Retail." class="Box Icon">&#xf7f9;</div
-><div PL-Title="To-Kratos"        PL-Bin="pl_ToKratos.bin" PL-Ver="v1.0 - od notzecoxao" PL-Desc="Konwertuje Target ID docelowy na (Kratos)<br><br>Dodaje nowe opcje w menu informacji o grze, pozwalające odinstalować tylko DLC lub tylko aktualizacje gry.<br>Aby usunąć funkcje debugowania, po prostu zrestartuj konsolę lub uruchom To-Retail." class="Box Icon">&#xf7f9;</div
-><div PL-Title="To-Retail"        PL-Bin="pl_ToRetail.bin" PL-Ver="v1.0 - od Leeful"     PL-Desc="Konwertuje Target ID docelowy z powrotem na Retail (CEX)<br><br>Usuwa funkcje To-DEX, To-DEV lub To-Kratos." class="Box Icon">&#xf7f9;</div
+<div  PL-Title="Spoof Menu" PL-Bin="INFO" PL-Ver="Menu Info:" PL-Desc="Contains payloads to spoof various things on your PS4." class="Box Icon">&#xf30f;</div
+><div PL-Title="Firmware Spoofer" PL-Bin=""                PL-Ver="v1.0 - By Leeful"     PL-Desc="Spoofs the PS4 firmware version to anything between 0.00 and 99.99<br><br>This is useful for spoofing the firmware to allow PSVR to work and for dev testing purposes but it WILL NOT allow higher firmware version games to be played on the PS4!!" class="Box Icon">&#xf661;</div
+><div PL-Title="To-DEX"           PL-Bin="pl_ToDEX.bin"    PL-Ver="v1.0 - By notzecoxao" PL-Desc="Converts your Target ID to (DEX)<br><br>Adds new options in the game info menu to uninstall just DLC or just game updates.<br>To remove debug features just reboot your console or run To-Retail." class="Box Icon">&#xf7f9;</div
+><div PL-Title="To-DEV"           PL-Bin="pl_ToDEV.bin"    PL-Ver="v1.0 - By notzecoxao" PL-Desc="Converts your Target ID to (DEV)<br><br>Adds new options in the game info menu to uninstall just DLC or just game updates.<br>To remove debug features just reboot your console or run To-Retail." class="Box Icon">&#xf7f9;</div
+><div PL-Title="To-Kratos"        PL-Bin="pl_ToKratos.bin" PL-Ver="v1.0 - By notzecoxao" PL-Desc="Converts your Target ID to (Kratos)<br><br>Adds new options in the game info menu to uninstall just DLC or just game updates.<br>To remove debug features just reboot your console or run To-Retail." class="Box Icon">&#xf7f9;</div
+><div PL-Title="To-Retail"        PL-Bin="pl_ToRetail.bin" PL-Ver="v1.0 - By Leeful"     PL-Desc="Converts your Target ID back to Retail (CEX)<br><br>Removes the To-DEX, To-DEV or To-Kratos functions." class="Box Icon">&#xf7f9;</div
 ></div>
 
 <div id=ModMenu class=MenuClass style=display:none>
-<div  PL-Title="Menu modów do gier" PL-Bin="INFO" PL-Ver="Informacje o menu:" PL-Desc="Contains Mod Menus and Trainers for PS4 Games.<br><br>GTA V Mod Menus are compatable with different update versions of the game." class="Box Icon">&#xf30f;</div
+<div  PL-Title="Game Mods Menu" PL-Bin="INFO" PL-Ver="Menu Info:" PL-Desc="Contains Mod Menus and Trainers for PS4 Games.<br><br>GTA V Mod Menus are compatable with different update versions of the game." class="Box Icon">&#xf30f;</div
 ><div PL-Title="PS4 Trainer (WebRTE)"           PL-Bin="pl_WebRTE.bin"           PL-Ver="v1.0 - By PS4 Trainer"                                            PL-Desc="Run payload then go to ps4trainer.com/Trainer/index.html<br>on any device to use trainers." class="Box Icon">&#xf108;</div
 ><div PL-Title="ArabicGuy Menu For GTA V v1.00" PL-Bin="pl_GTA_ArabicGuy100.bin" PL-Ver="v1.0 - Original Version By RF0oDxM0Dz / 6.72 PORT By Mustafa0436" PL-Desc="Mod Menu for GTA V<br>*Game version 1.00.<br><br>Activate Menu With: 'L1 + R1'" class="Box Icon">&#xf5e1;</div
 ><div PL-Title="ArabicGuy Menu For GTA V v1.27" PL-Bin="pl_GTA_ArabicGuy127.bin" PL-Ver="v1.0 - Original Version By RF0oDxM0Dz / 6.72 PORT By GraFfiX420"  PL-Desc="Mod Menu for GTA V<br>*Game update v1.27 must be installed.<br><br>Activate Menu With: 'D-Pad Right + Square'" class="Box Icon">&#xf5e1;</div
@@ -114,21 +114,21 @@ if (UA=="6.72"&&window.applicationCache.status!='0'){runJB();}
 ></div>
 
 <div id=LinuxMenu class=MenuClass style=display:none>
-<div  PL-Title="Menu Linux'a" PL-Bin="INFO" PL-Ver="Informacje o menu:" PL-Desc="Contains Linux Loader payloads to run Linux on your PS4." class="Box Icon">&#xf30f;</div
-><div PL-Title="Zwykły Linux" PL-Bin="pl_Linux.bin"  PL-Ver="kernel Gentoo 5.3.7 - od mircoho" PL-Desc="Załaduj dystrybucję Linuksa z USB.<br><br>Jeśli to nie zadziała na Twoim modelu PS4, wypróbuj payload Linux'a Baikal." class="Box Icon"><img src="files/img/linux.svg"></div
-><div PL-Title="Linux Baikal"  PL-Bin="pl_Linux2.bin" PL-Ver="kernel Gentoo 5.3.7 - od mircoho" PL-Desc="Załaduj dystrybucję Linuksa z USB.<br><br>Jeśli to nie zadziała na Twoim modelu PS4, wypróbuj pakiet payloadu Zwykły Linux." class="Box Icon"><img src="files/img/linux.svg"></div
+<div  PL-Title="Linux Menu" PL-Bin="INFO" PL-Ver="Menu Info:" PL-Desc="Contains Linux Loader payloads to run Linux on your PS4." class="Box Icon">&#xf30f;</div
+><div PL-Title="Linux Regular" PL-Bin="pl_Linux.bin"  PL-Ver="Gentoo kernel 5.3.7 - By mircoho" PL-Desc="Load a Linux Distribution from USB.<br><br>If this does not work on your model of PS4, try the Linux Baikal payload." class="Box Icon"><img src="files/img/linux.svg"></div
+><div PL-Title="Linux Baikal"  PL-Bin="pl_Linux2.bin" PL-Ver="Gentoo kernel 5.3.7 - By mircoho" PL-Desc="Load a Linux Distribution from USB.<br><br>If this does not work on your model of PS4, try the Linux Regular payload." class="Box Icon"><img src="files/img/linux.svg"></div
 ></div>
 
 </div>
 
 <div id=navFix1 tabindex="6"></div>
-<div id=Title class=Title>HEN v2.4b17.3</div>
+<div id=Title class=Title>HEN 2.1.3</div>
 <div id=Popup onclick="Popup.classList.remove('animation');"><div id="PopIcon"></div><div id="PopTitle"></div></div>
 <div id=BottomPopup></div>
 <div id=InfoBox style=display:none><div id=InfoTitle></div><div id=InfoVerAuth></div><div id=InfoDesc></div></div>
 <div id=msgs style=display:none class=LoadingTXT></div>
 <div id=FanTemp class=Info1></div>
-<div id=PassFail>Wykryto wersję oprogramowania: <span id=FWver></span><br>Statystyki Exploit'a:&nbsp; Prawidłowe = <span id=passCounter></span>&nbsp;&nbsp;&nbsp;:&nbsp;&nbsp;&nbsp;Porażki = <span id=failCounter></span></div>
+<div id=PassFail>Detected Firmware Version: v<span id=FWver></span><br>Exploit Stats:&nbsp; Pass = <span id=passCounter></span>&nbsp;&nbsp;&nbsp;:&nbsp;&nbsp;&nbsp;Fail = <span id=failCounter></span></div>
 
 <script>
 var SS=sessionStorage;var LS=localStorage;var CC=createCookie;var RC=readCookie;function createCookie(name,value,days){if(days){var date=new Date();date.setTime(date.getTime()+(days*24*60*60*1000));var expires="; expires="+date.toGMTString();}else
