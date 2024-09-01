@@ -15,13 +15,13 @@ body{overflow:hidden;font-family:sans-serif;font-size:18px;font-weight:bold;text
 </head>
 <body>
 <div id=choice class=choice style=display:none>
-<div class=TxT1>CHOOSE A TEMPERATURE:<span id="tempz"></span>&#176;C</div>
+<div class=TxT1>WYBIERZ TEMPERATURĘ:<span id="tempz"></span>&#176;C</div>
 <input type="range" min="40" max="79" value="69" class="slider" id="tmpRange" autofocus="autofocus" onmouseup="parent.window.setTEMP()">
 <div class=TxT2 tabindex="4">40&#176;--------------------------50&#176;---------------------------60&#176;--------------------------70&#176;------------------------79&#176;</div>
-<div class=TxT3><br>Move the slider with the D-Pad and press X to set the new fan temperature threshold.<br>The default PS4 setting is set at 79&#176;</div>
+<div class=TxT3><br>Przesuń suwak za pomocą D-Pad i naciśnij X, aby ustawić nowy próg temperatury wentylatora.<br>Domyslne ustawienie PS4 to &#176;</div>
 </div>
 <div class=mousefix onmouseover="keepfocus()" onmouseup="parent.window.setTEMP()"></div>
-<div id=fail class=info style=display:none>ERROR!</div>
+<div id=fail class=info style=display:none>BŁĄD!</div>
 <script>
 if (localStorage.CurrentTemp == null){localStorage.CurrentTemp = 79}
 document.getElementById("tmpRange").value = localStorage.CurrentTemp;
