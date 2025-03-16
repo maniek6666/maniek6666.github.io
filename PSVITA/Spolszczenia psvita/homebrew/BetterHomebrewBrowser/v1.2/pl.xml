@@ -53,7 +53,7 @@
     <string src="Rozmiar aplikacji jest nieznany" id="msg_download_nosize"/>
     
     <string src="Alfabetycznie" id="msg_sort_alpha"/>
-    <string src="Alfabetycznie (odwrócony)" id="msg_sort_alpharev"/>
+    <string src="Alfabetycznie (odwrotność)" id="msg_sort_alpharev"/>
     <string src="Najnowszy pierwszy" id="msg_sort_mostrecent"/>
     <string src="Najstarszy pierwszy" id="msg_sort_oldfirst"/>
     <string src="Najczęściej pobierane" id="msg_sort_mostdownloaded"/>
