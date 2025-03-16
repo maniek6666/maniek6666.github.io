@@ -61,7 +61,7 @@
 
     <string src="Podziękowania" id="msg_settings_credits"/>
         
-    <string src="Zasługi" id="msg_settings_credits"/>
+    <string src="Twórcy" id="msg_settings_credits"/>
 
     <string src="Wsparcie" id="msg_donations"/>
     <string src="(Link PayPal)&#xA;Dziękuję" id="msg_donate"/>
