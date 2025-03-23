@@ -59,7 +59,7 @@
 #define TEMP_UX0_PATH "ux0:temp/"
 #define TEMP_UR0_PATH "ur0:temp/"
 
-#define BOOTSTRAP_VERSION_STR "henlo-Menu Startowe v1.0.4 od skgleba"
+#define BOOTSTRAP_VERSION_STR "Menu Startowe henlo v1.0.4 od skgleba MOD PL od maniek6666"
 
 #define OPTION_COUNT 6
 enum E_MENU_OPTIONS {
@@ -70,7 +70,7 @@ enum E_MENU_OPTIONS {
     MENU_RESET_TAICFG,
     MENU_EXIT_W_SD2VITA
 };
-const char* menu_items[OPTION_COUNT] = { "Wyjdz", "Zainstaluj Henkaku", "Zainstaluj VitaDeploy", "Zamien NEAR na VitaDeploy", "Zresetartuj taihen config.txt", "Wyjdz i zamontuj sd2vita jako ux0" };
+const char* menu_items[OPTION_COUNT] = { "Wyjdz", "Zainstaluj Henkaku", "Zainstaluj VitaDeploy", "Zamien NEAR na VitaDeploy", "Zresetartuj taihen config.txt", "Wyjdz i zamontuj SD2Vita jako ux0" };
 
 int __attribute__((naked, noinline)) call_syscall(int a1, int a2, int a3, int num) {
     __asm__(
@@ -119,9 +119,9 @@ int install_vitadeploy_default() {
 }
 
 int vitadeploy_x_near(int syscall_id) {
-    COLORPRINTF(COLOR_WHITE, "Spowoduje to zastapienie aplikacji 'near' na 'VitaDeploy'.\nWymaga ponownego uruchomienia.\n\n");
+    COLORPRINTF(COLOR_WHITE, "Spowoduje to zastapienie aplikacji \'near\' na 'VitaDeploy'.\nWymaga ponownego uruchomienia.\n\n");
     COLORPRINTF(COLOR_YELLOW, "OSTRZEZENIE: spowoduje to zresetowanie układu bombli\n\n");
-    COLORPRINTF(COLOR_CYAN, "KWADRAT: Zamien NEAR na VitaDeploy\nTROJKAT: Przywroc NEAR\nKOLO: Wroc\n\n");
+    COLORPRINTF(COLOR_CYAN, "KWADRAT: Zamien NEAR na VitaDeploy\nTROJKAT: Przywroc NEAR\nKOLKO: Wroc\n\n");
     sceKernelDelayThread(0.5 * 1000 * 1000);
     SceCtrlData pad;
     while (1) {
@@ -389,7 +389,7 @@ int _start(SceSize args, void* argp) {
 
 EXIT:
     cprintf("WYJSCIE z res 0x%08X\n", res);
-    printf("Wijscie za 3 Sekundy\n");
+    printf("Wyjscie za 3 Sekundy\n");
     sceKernelDelayThread(3 * 1000 * 1000);
     
     // Remove pkg patches

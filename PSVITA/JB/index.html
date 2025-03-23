@@ -19,7 +19,7 @@
 				color:white;
 				#background-image:linear-gradient(90deg, #0a6d00 0%, #33a128 45%, #0a6d00 100%); /* green */
 				#background-image:linear-gradient(90deg, #002ea2 0%, #0042e7 45%, #002ea2 100%);/* blue */
-				background-image:linear-gradient(90deg, #002ea2 0%, #0042e7 45%, #002ea2 100%); /* orange */
+				background-image:linear-gradient(90deg, #9e8003 0%, #cfa807 45%, #9e8003 100%); /* orange */
 			}
 			
 			.headertext {
@@ -199,9 +199,9 @@
 	
 	<body>
 
-		<span id="debug" style="position:absolute; color:white; font-size:15px;">&#9733;</span>
+		<span id="debug" style="position:absolute; color:black; font-size:14px;">&#9733;</span>
 		<script>
-		document.getElementById("debug").innerHTML = "Wykryto Wersję: " + firmware;
+		document.getElementById("debug").innerHTML = "Detected ver: " + firmware;
 		</script>
 			
 		<center>
@@ -218,13 +218,14 @@
 				
 				<!-- Content -------------------------------------------------------------------->
 				<div class="contentcontainer">
-					<p>Witaj w HENlo<br>Odblokuj swoją Vitę	a będziesz mógł uruchomić nieoficjalne Gry i Programy.</p>
+					<br>
+					<p>Witaj w HENlo<br>Odblokuj swoją Vitę, a będziesz mógł uruchomić nieoficjalne Gry i Programy.</p>
 					<p>Wsparcie dla PSVita Fat,Slim oraz PSTV z Oprogramowaniem: <b>3.65 - 3.74</b></p>
 				</div>
 				
 				<!-- Buttons -------------------------------------------------------------------->
 				<div class="buttonarea">
-					<button class="button" onclick="pagescroll('page_welcome','page_hen')">Odblokuj Vita</button>
+					<button class="button" onclick="pagescroll('page_welcome','page_hen')">Odblokuj</button>
 					<br><br><br>
 					<button style="float:left;" class="button" onclick="pagescroll('page_welcome','page_readme')">Czytaj</button>
 					<button style="float:right;" class="button" onclick="pagescroll('page_welcome','page_changes')">Zmiany</button>
@@ -246,7 +247,7 @@
 				<!-- Content -------------------------------------------------------------------->
 				<div class="contentcontainer">
 					<br>
-					<p>To Oprogramowanie nie jest wspierane!</p>
+					<p>To Oprogramowanie nie jest obsługiwane!</p>
 				</div>
 			</div>
 			<script>
@@ -264,7 +265,7 @@
 				<!-- Content -------------------------------------------------------------------->
 				<div class="contentcontainer">
 					<br>
-					<p>To Oprogramowanie nie jest wspierane!</p>
+					<p>To Oprogramowanie nie jest obsługiwane!</p>
 					<p>Musisz menualnie zainstalować <b>3.65</b> lub wyższe!</p>
 				</div>
 				
@@ -327,7 +328,7 @@
 						<p>Nakładka Jailbreaka od Freakler.</p>
 						<br>
 						<b>Modyfikacje</b>
-						<p>Tłumaczenie oraz Modyfikacje od Mr.NOBODY PS3.</p>
+						<p>Tłumaczenie oraz Modyfikacje od maniek6666.</p>
 						<br>
 						<br>
 
@@ -348,6 +349,12 @@
 				<!-- Content -->
 				<div class="contentcontainer"> <!-- -->
 					<div class="scrollbox">
+						<h1>Nowe funkcje w wersji 1.04</h1>
+						<pre>
+ — Naprawiono wsparcie aktywowanych konsol Deweloperskich/Testkit
+ — Dodano wsparcie oprogramowania układowego w wersji 3.67
+ — Ulepszone informacje zwrotne dotyczące nawigacji w menu ładowania początkowego
+						</pre>
 						<h1>Nowe funkcje w wersji 1.03</h1>
 						<pre>
  - HENlo dodano fałszowanie wersji henkaku<p>
@@ -377,7 +384,7 @@
 				
 				<!-- Buttons -->
 				<div class="buttonarea">
-				<button class="button" onclick="pagescroll('page_changes','page_welcome')">Wróć</button>
+				<button class="button" onclick="pagescroll('page_changes','page_welcome')">Go back</button>
 				</div>
 			</div>
 								
@@ -394,13 +401,12 @@
 					<p>Jeśli uruchomisz HENlo jailbreak.</p>
 					<p>Po zakończeniu procesu ładowania przeglądarka internetowa zostanie automatycznie zamknięta i uruchomi się <b>bootstrap henlo_jb</b>.</p>
 					<p>Aby rozpocząć naciśnij przycisk <b>Odblokuj</b>..</p>
-					<br>
 				</div>
 				
 				<!-- Buttons -->
 				<div class="buttonarea">
 					<button style="float:left;" class="button" onclick="pagescroll('page_hen','page_welcome')">Anuluj</button>
-					<button style="float:right;" class="button" onclick="location.href = 'go'">Odblokuj</button>
+					<button style="float:right;" class="button" onclick="location.href = 'go'">Unlock</button>
 				</div>
 			</div>
 			
