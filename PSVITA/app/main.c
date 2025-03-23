@@ -49,11 +49,11 @@
 
 #include "ops.c" // misc, too clogged otherwise
 
-#define REPO_URL "http://download.psvita.group/VPKs/"
+#define REPO_URL "https://psvita.ovh/PSVITA/VPKs/"
 #define F661_URL "http://de01.psp.update.playstation.org/update/psp/image/eu/2014_1212_6be8878f475ac5b1a499b95ab2f7d301/"
 #define F661_FNAME "EBOOT.PBP"
-#define QAD_VPK_FNAME "Quick.App.Downloader.vpk"
-#define MNT_VPK_FNAME "vitadeploypl.vpk"
+#define QAD_VPK_FNAME "VitaAPPInstaler.vpk"
+#define MNT_VPK_FNAME "VitaDeployPL.vpk"
 
 #define TEMP_UX0_PATH "ux0:temp/"
 #define TEMP_UR0_PATH "ur0:temp/"
@@ -69,7 +69,7 @@ enum E_MENU_OPTIONS {
 	MENU_DOWNLOAD_FW661,	
 };
 
-const char* menu_items[OPTION_COUNT] = { "Wyjdz", "Zainstaluj Quick App Downloader", "Zainstaluj Vitadeploy", "Pobierz oprogramowanie 6.61 dla Adrenaline" };
+const char* menu_items[OPTION_COUNT] = { "Wyjdz", "Zainstaluj Vita APP Instaler", "Zainstaluj Vitadeploy", "Pobierz oprogramowanie 6.61 dla Adrenaline" };
 
 int __attribute__((naked, noinline)) call_syscall(int a1, int a2, int a3, int num) {
     __asm__(
@@ -253,7 +253,7 @@ int _start(SceSize args, void* argp) {
 
 EXIT:
     cprintf("WYJSCIE z res 0x%08X\n", res);
-    printf("Wijscie za 3 Sekundy\n");
+    printf("Wyjscie za 3 Sekundy\n");
     sceKernelDelayThread(3 * 1000 * 1000);
     
     // Remove pkg patches
